@@ -1,15 +1,7 @@
-import React from 'react'
+import Link from 'next/link'
 
 const DonateBanner = () => {
     return (
-        // <section>
-        //     <h1>Sustain the Arts</h1>
-        //     <p>Support Opera Today. Inspire Audiences Tomorrow.</p>
-        //     <button>
-        //         Become A Patron
-        //     </button>
-        // </section>
-
         <div className="relative w-full h-75">
             {/* Background */}
             <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
@@ -20,14 +12,17 @@ const DonateBanner = () => {
             </svg>
 
             {/* Text Content */}
-            <div className="relative z-10 p-10">
-                <h2 className="text-2xl font-bold text-gray-800">Sustain the Arts 🎵</h2>
-                <p className="mt-4 text-xl text-purple-800">
+            <div className="relative z-10 flex flex-col m-auto py-10 w-2/5">
+                <h1 className="text-4xl font-bold text-[#4f5251] tracking-normal">
+                    Sustain the Arts 🎵
+                </h1>
+                <h3 className="mt-4 text-3xl font-bold text-[#77385c] opacity-80 tracking-wider">
                     Support Opera Today. Inspire Audiences Tomorrow
-                </p>
-                <button className="mt-6 inline-flex items-center rounded-lg bg-amber-600 px-4 py-2 text-white hover:bg-amber-700">
+                </h3>
+                <Link className="mt-6 text-lg text-[#d5b695] uppercase tracking-wide hover:text-[#aa9177]"
+                    href="/donate">
                     Become a Patron →
-                </button>
+                </Link>
             </div>
         </div>
 
