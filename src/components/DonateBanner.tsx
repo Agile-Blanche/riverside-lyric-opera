@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Music2 } from 'lucide-react'
 
 const DonateBanner = () => {
     return (
@@ -13,9 +14,13 @@ const DonateBanner = () => {
 
             {/* Text Content */}
             <div className="relative z-10 flex flex-col m-auto py-15 md:py-10 w-3/4 md:w-4/5 lg:w-2/5">
-                <h1 className="text-3xl md:text-4xl font-bold text-[#4f5251] tracking-normal">
-                    Sustain the Arts 🎵
-                </h1>
+                <span className="flex items-center text-[#4f5251]">
+                    <h1 className="text-3xl md:text-4xl font-bold tracking-normal me-3 md:me-7">
+                        Sustain the Arts
+                    </h1>
+
+                    <Music2 className="size-11" />
+                </span>
 
                 <h3 className="mt-3 md:mt-4 text-xl md:text-3xl font-bold text-[#77385c] opacity-80 tracking-wider">
                     Support Opera Today. Inspire Audiences Tomorrow
