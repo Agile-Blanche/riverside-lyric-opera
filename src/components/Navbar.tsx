@@ -4,17 +4,18 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
+    <header className="sticky top-0 z-50">
     <nav className="bg-[#66023c] h-[10rem] flex">
       {/* Logo or left side */}
-      <Image
-        src="/faux-logo.jpeg"
-        alt="Riverside Lyric Opera Logo"
-        width={95}
-        height={95}
-        priority
-        className="my-8 ml-12 hover:cursor-pointer"
-      />
-
+      <Link href="/" className="my-8 ml-12 hover:cursor-pointer inline-block">
+        <Image
+          src="/faux-logo.jpeg"
+          alt="Riverside Lyric Opera Logo"
+          width={95}
+          height={95}
+          priority
+        />
+      </Link>
       {/* Right side: links + hamburger */}
       <div className="flex ml-auto space-x-12 items-start">
         <ul className="hidden md:flex space-x-12 text-white items-center pt-12">
@@ -37,5 +38,6 @@ export default function Navbar() {
         </button>
       </div>
     </nav>
+    </header>
   );
 }
