@@ -28,8 +28,7 @@ const DonateBanner = () => {
 
                 <Link
                     href="/donate"
-                    className="mt-4 md:mt-6 text-base md:text-lg text-[#d5b695] uppercase tracking-wide hover:text-[#aa9177]"
-                >
+                    className="mt-4 md:mt-6 text-base md:text-lg text-[#d5b695] uppercase tracking-wide hover:text-[#aa9177]">
                     Become a Patron →
                 </Link>
             </div>
