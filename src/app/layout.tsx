@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { Alike } from "next/font/google";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const alike = Alike({
+  weight: "400",
   subsets: ["latin"],
+  variable: "--font-alike", // optional: exposes it as a CSS var
 });
 
 export const metadata: Metadata = {
@@ -24,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      
+      <body className={`${alike.className}`}>
+        <Navbar/>
         {children}
       </body>
     </html>
