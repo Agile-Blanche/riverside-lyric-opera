@@ -50,7 +50,9 @@ export default function Navbar() {
                     href={href}
                     aria-current={active ? "page" : undefined}
                     className={[
-                      active ? "text-[#d9bb9b]" : "hover:text-[#d9bb9b]",
+                      active
+                        ? "text-[#d9bb9b]"
+                        : "text-white hover:text-[#d9bb9b]",
                     ].join(" ")}
                   >
                     {label}
