@@ -12,7 +12,7 @@ const alike = Alike({
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['300', '400', '600'],
+  weight: ['200', '400', '600'],
   variable: '--font-poppins',
 })
 
