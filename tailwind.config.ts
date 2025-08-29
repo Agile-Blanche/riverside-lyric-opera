@@ -1,13 +1,14 @@
 import type { Config } from "tailwindcss";
 
 export default {
-    content: [
-        "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    ],
+    content: ['./src/**/*.{ts,tsx,js,jsx}'],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                body: ["var(--font-alike)", "sans-serif"], // default
+                accent: ['var(--font-poppins)', 'serif'],
+            },
+        },
     },
     plugins: [],
 } satisfies Config;
