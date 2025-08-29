@@ -13,22 +13,22 @@ const DonateBanner = () => {
             </svg>
 
             {/* Text Content */}
-            <div className="relative z-10 flex flex-col py-15 md:py-25 w-3/4 m-auto ps-5">
+            <div className="relative z-10 flex flex-col py-15 md:py-25 w-4/5 m:w-3/4 m-auto ps-5">
                 <span className="flex items-center text-[#4f5251]">
-                    <h1 className="text-4xl md:text-6xl font-normal tracking-normal me-3 md:me-7">
+                    <h1 className="text-5xl md:text-6xl font-normal tracking-normal md:me-7">
                         Sustain the Arts
                     </h1>
 
                     <Music2 className="size-15" />
                 </span>
 
-                <h3 className="mt-3 md:mt-4 text-xl md:text-4xl font-normal text-[#77385c] opacity-80 tracking-wider">
+                <h3 className="mt-3 md:mt-4 text-2xl md:text-4xl font-normal text-[#77385c] opacity-80 tracking-wider">
                     Support Opera Today. Inspire Audiences Tomorrow
                 </h3>
 
                 <Link
                     href="/donate"
-                    className="mt-4 md:mt-6 text-base font-bold md:text-xl text-[#d5b695] uppercase tracking-wide hover:text-[#aa9177]">
+                    className="mt-4 md:mt-6 text-lg font-bold md:text-xl text-[#d5b695] uppercase tracking-wide hover:text-[#aa9177]">
                     Become a Patron →
                 </Link>
             </div>
