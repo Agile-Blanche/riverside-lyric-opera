@@ -1,9 +1,10 @@
 "use client";
 
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const NAV_LINKS = [
   { href: "/schedule", label: "SCHEDULE" },
@@ -13,6 +14,7 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
   const isActive = (href: string) =>
@@ -20,11 +22,11 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50">
-      <nav className="bg-[#66023c] md:h-[9rem] lg:h-[10rem] flex">
+      <nav className="bg-[#66023c] md:h-[9rem] lg:h-[10rem] flex relative">
         {/* Logo / left side */}
         <Link
           href="/"
-          className="my-8 ml-12 inline-block hover:cursor-pointer hover:opacity-90"
+          className="my-8 ml-8 sm:ml-12 inline-block hover:cursor-pointer hover:opacity-90"
           aria-label="Go to homepage"
         >
           <Image
@@ -43,14 +45,12 @@ export default function Navbar() {
             {NAV_LINKS.map(({ href, label }) => {
               const active = isActive(href);
               return (
-               <li key={href}>
+                <li key={href}>
                   <Link
                     href={href}
                     aria-current={active ? "page" : undefined}
                     className={[
-                      active
-                        ? "text-[#d9bb9b]"
-                        : "hover:text-[#d9bb9b]"
+                      active ? "text-[#d9bb9b]" : "hover:text-[#d9bb9b]",
                     ].join(" ")}
                   >
                     {label}
@@ -59,17 +59,45 @@ export default function Navbar() {
               );
             })}
           </ul>
-
           <button
-            className="text-white pr-12 pt-11 hover:cursor-pointer hover:opacity-90 sm:hidden"
+            onClick={() => setOpen(!open)}
+            className="text-white pr-9 pt-11 hover:cursor-pointer hover:opacity-90 sm:hidden"
             aria-label="Expand Menu"
-            aria-expanded="false"
+            aria-expanded={open}
             aria-controls="dropdown-menu"
             type="button"
           >
-            <Menu size={32} />
+            {open ? <X size={32} /> : <Menu size={32} />}
           </button>
         </div>
+        {open && (
+          <div
+            id="dropdown-menu"
+            className="absolute top-full left-0 w-full bg-[#66023c] sm:hidden z-50"
+          >
+            <ul className="flex flex-col items-center space-y-10 py-8">
+              {NAV_LINKS.map(({ href, label }) => {
+                const active = isActive(href);
+                return (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      onClick={() => setOpen(false)} // close menu after click
+                      aria-current={active ? "page" : undefined}
+                      className={
+                        active
+                          ? "text-[#d9bb9b]"
+                          : "text-white hover:text-[#d9bb9b]"
+                      }
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
       </nav>
     </header>
   );
