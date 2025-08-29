@@ -6,7 +6,7 @@ export default {
         extend: {
             fontFamily: {
                 body: ["var(--font-alike)", "sans-serif"], // default
-                accent: ['var(--font-montserrat)', 'serif'],
+                accent: ['var(--font-poppins)', 'serif'],
             },
         },
     },

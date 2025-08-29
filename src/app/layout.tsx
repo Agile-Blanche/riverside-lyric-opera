@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
-import { Alike, Montserrat } from "next/font/google";
+import { Alike, Poppins } from "next/font/google";
 
 const alike = Alike({
   weight: "400",
@@ -10,11 +10,10 @@ const alike = Alike({
   variable: "--font-alike",
 });
 
-const montserrat = Montserrat({
+const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['300'],
-  // weight: ['300', '400', '500', '700'], // pick the weights you’ll use
-  variable: '--font-montserrat',
+  weight: ['300', '400', '600'],
+  variable: '--font-poppins',
 })
 
 export const metadata: Metadata = {
@@ -28,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${alike.variable} ${montserrat.variable}`}>
+    <html lang="en" className={`${alike.variable} ${poppins.variable}`}>
       <body className="font-body">
         <Navbar />
         {children}
