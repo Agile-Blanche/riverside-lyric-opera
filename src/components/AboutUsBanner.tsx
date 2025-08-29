@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const AboutUsBanner = () => {
     return (
-        <section className="bg-[#f7efe5] py-12 sm:py-16">
+        <section className="bg-[#f7efe5] font-accent py-12 sm:py-16">
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6">
                 {/* Card */}
                 <div
@@ -32,7 +32,6 @@ const AboutUsBanner = () => {
                         <div className="px-6 sm:px-10 lg:px-14 py-10 sm:py-12 flex flex-col justify-center">
                             <h2
                                 className="
-                                font-accent
                       text-center md:text-left
                       text-white text-3xl sm:text-4xl lg:text-5xl
                       font-light
