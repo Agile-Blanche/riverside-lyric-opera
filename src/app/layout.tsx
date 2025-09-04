@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Poppins, Sarabun } from "next/font/google";
+import Footer from "@/components/Footer";
 
-import { Alike, Poppins } from "next/font/google";
-
-const alike = Alike({
-  weight: "400",
+const sarabun = Sarabun({
+  weight: ["400", "700"],
   subsets: ["latin"],
-  variable: "--font-alike",
+  variable: "--font-sarabun",
 });
 
 const poppins = Poppins({
@@ -27,10 +27,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${alike.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${sarabun.variable} ${poppins.variable}`}>
       <body className="font-body">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
