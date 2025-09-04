@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import aboutBannerImg from '/public/assets/imgs/aboutBanner.jpg'
+import aboutBannerImg from '/public/imgs/aboutBanner.jpg'
 import Link from 'next/link'
 
 const AboutUsBanner = () => {
