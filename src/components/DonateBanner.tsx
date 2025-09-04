@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Music2 } from 'lucide-react'
+import Image from 'next/image'
 
 const DonateBanner = () => {
     return (
@@ -27,9 +28,23 @@ const DonateBanner = () => {
                 </h3>
 
                 <Link
-                    href="/donate"
-                    className="mt-4 md:mt-6 m-auto text-lg font-bold md:text-xl text-[#d5b695] uppercase tracking-wide hover:text-[#aa9177]">
-                    PayPal Button
+                    href="https://www.paypal.com/donate" // 👈 replace with your real donation link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                        inline-flex items-center justify-center
+                        rounded-2xl bg-white w-40 m-auto mt-5
+                        px-7 py-4
+                        shadow-md hover:shadow-lg
+                        transition-all
+                    ">
+                    <Image
+                        src="/images/paypal-logo.svg"
+                        alt="Donate with PayPal"
+                        width={100}
+                        height={30}
+                        priority
+                    />
                 </Link>
             </div>
 
