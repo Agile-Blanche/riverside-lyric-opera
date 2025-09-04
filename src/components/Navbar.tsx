@@ -47,7 +47,7 @@ export default function Navbar() {
                   <Link
                     href={href}
                     aria-current={active ? "page" : undefined}
-                    className={[
+                    className={["font-accent font-bold",
                       active
                         ? "text-[#ff6830]"
                         : "text-black hover:text-[#ff6830]",
