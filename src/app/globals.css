@@ -9,3 +9,9 @@
         font-family: var(--font-poppins), serif;
     }
 }
+
+@media (max-width: 375px) and (max-height: 667px), (max-width: 360px) and (max-height: 740px) {
+    .landing {
+        padding: 0px;
+    }
+}
