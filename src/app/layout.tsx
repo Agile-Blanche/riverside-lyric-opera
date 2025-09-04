@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import { Poppins, Sarabun } from "next/font/google";
 
 const sarabun = Sarabun({
-  weight: "400",
+  weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-sarabun",
 });

@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+@theme {
+    /* Colors */
+    --color-brand-cream: #eaedec;
+    --color-brand-orange: #ff5f33;
+    --color-brand-turquoise: #ecefee;
+    --color-brand-black: #1f2937;
+    --color-brand-lilac: #ded7ea;
+
+    /* (Optional) font family tokens — creates font-body, font-accent utilities */
+    --font-body: var(--font-poppins), sans-serif;
+    --font-accent: "Open Sans Condensed", sans-serif;
+    --font-subtitle: var(--font-sarabun), serif;
+}
+
 @layer utilities {
     .font-body {
         font-family: var(--font-poppins), sans-serif;

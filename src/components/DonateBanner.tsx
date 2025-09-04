@@ -9,17 +9,17 @@ const DonateBanner = () => {
                 {/* Purple */}
                 <polygon points="0,0 100,0 100,100 45,100" fill="#ded7ea" />
                 {/* Cream (light turquoise) */}
-                <polygon points="0,0 55,0 45,100 0,100" fill="#ecf0ee" />
+                <polygon points="0,0 55,0 45,100 0,100" fill="#ecefee" />
             </svg>
 
             {/* Text Content */}
             <div className="relative z-10 flex flex-col py-15 md:py-25 w-4/5 m:w-3/4 m-auto ps-5">
                 <span className="flex items-center">
-                    <h1 className="text-[#ed7243] text-5xl md:text-6xl font-normal tracking-normal md:me-7">
+                    <h1 className="text-brand-orange text-5xl md:text-6xl font-normal tracking-normal md:me-7">
                         Sustain the Arts
                     </h1>
 
-                    <Music2 className="text-[#000000] size-15" />
+                    <Music2 className="text-black size-15" />
                 </span>
 
                 <h3 className="mt-3 md:mt-4 text-2xl md:text-4xl font-normal text-black tracking-normal">

@@ -8,9 +8,9 @@ export default function AboutRLO() {
 
     return (
         <section className="w-full">
-            <div className="bg-[#ecf0ee] px-6 sm:px-15 pt-10 sm:pt-14">
-                <div className="p-8 sm:p-12 border-t-5 border-l-5 border-r-5 border-[#f2683a]">
-                    <h1 className="pt-13 font-accent font-bold text-7xl tracking-wider text-center text-[#1f2937]">
+            <div className="bg-brand-cream px-6 sm:px-15 pt-10 sm:pt-14">
+                <div className="p-8 sm:p-12 border-t-5 border-l-5 border-r-5 border-brand-orange">
+                    <h1 className="pt-13 font-accent font-bold text-7xl tracking-wider text-center text-brand-black">
                         ABOUT RLO
                     </h1>
 
@@ -22,8 +22,8 @@ export default function AboutRLO() {
             </div>
 
             {/* Orange band with teams */}
-            <div className="bg-[#f2683a] px-6 sm:px-15 pb-10 sm:pb-14">
-                <div className="p-8 sm:p-12 border-b-5 border-l-5 border-r-5 border-[#ecf0ee]">
+            <div className="bg-brand-orange px-6 sm:px-15 pb-10 sm:pb-14">
+                <div className="p-8 sm:p-12 border-b-5 border-l-5 border-r-5 border-brand-cream">
                     <div className="mx-auto max-w-screen-xl lg:px-25 lg:py-16">
                         <SectionBlock title="NEW TEAM">
                             <TeamGrid people={newTeam} />
@@ -56,9 +56,9 @@ function SectionBlock({
             <div className="flex items-center gap-4">
                 <h2 className="font-accent font-light text-4xl tracking-normal uppercase text-white">
                     Our&nbsp;
-                    <span className="text-[#ded7ea]">{title}</span>
+                    <span className="text-brand-lilac">{title}</span>
                 </h2>
-                <div className="h-1 flex-1 bg-[#ecf0ee] rounded-md" />
+                <div className="h-1 flex-1 bg-brand-cream rounded-md" />
             </div>
 
             {/* People Grid */}
@@ -85,8 +85,8 @@ function TeamGrid({ people }: { people: Person[] }) {
                             priority={false}
                         />
                     </div>
-                    <div className="text-sm sm:text-md break-words leading-tight text-black lg:w-1/2">
-                        <div className="font-semibold">
+                    <div className="text-sm sm:text-md break-words leading-tight text-black font-subtitle lg:w-1/2">
+                        <div className="font-bold">
                             {p.name}
                         </div>
                         <div className="border-t border-black my-2 sm:my-3 w-5"></div>
@@ -118,7 +118,7 @@ function BoardGrid({ people }: { people: Person[] }) {
                             priority={false}
                         />
                     </div>
-                    <div className="text-sm sm:text-md leading-tight text-black">
+                    <div className="text-sm sm:text-md leading-tight text-black font-subtitle font-bold">
                         <div className="border-t border-black my-3 w-5"></div>
                         <div className="font-semibold">
                             {p.name}
