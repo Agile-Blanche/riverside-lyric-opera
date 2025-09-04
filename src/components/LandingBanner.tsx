@@ -7,7 +7,7 @@ export default function LandingBanner() {
  <section className="relativel max-w-[1512px] max-h-[600px]">
   {/* Background image */}
   <Image
-    src="/assets/images/landing.png"
+    src="/images/landing.png"
     alt="Landing Page Image"
     width={1600}
     height={800}
