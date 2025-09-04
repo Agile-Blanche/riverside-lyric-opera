@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Poppins, Sarabun } from "next/font/google";
+import Footer from "@/components/Footer";
 
 const sarabun = Sarabun({
   weight: ["400", "700"],
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className="font-body">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
