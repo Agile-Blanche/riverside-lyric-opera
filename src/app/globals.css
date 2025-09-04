@@ -2,10 +2,34 @@
 
 @layer utilities {
     .font-body {
-        font-family: var(--font-alike), sans-serif;
+        font-family: var(--font-poppins), sans-serif;
     }
 
-    .font-accent {
-        font-family: var(--font-poppins), serif;
+    .font-subtitle {
+        font-family: var(--font-sarabun), serif;
     }
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('/fonts/open-sans-condensed/OpenSansCondensed-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('/fonts/open-sans-condensed/OpenSansCondensed-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('/fonts/open-sans-condensed/OpenSansCondensed-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }

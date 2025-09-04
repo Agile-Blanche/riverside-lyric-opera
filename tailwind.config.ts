@@ -5,8 +5,9 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                body: ["var(--font-alike)", "sans-serif"], // default
-                accent: ['var(--font-poppins)', 'serif'],
+                body: ["var(--font-poppins)", "sans-serif"], // default
+                accent: ['Open Sans Condensed', 'serif'],
+                subtitle: ['var(--font-sarabun)', 'serif'],
             },
         },
     },
