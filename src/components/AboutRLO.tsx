@@ -24,7 +24,7 @@ export default function AboutRLO() {
             {/* Orange band with teams */}
             <div className="bg-[#f2683a] px-6 sm:px-15 pb-10 sm:pb-14">
                 <div className="p-8 sm:p-12 border-b-5 border-l-5 border-r-5 border-[#ecf0ee]">
-                    <div className="mx-auto max-w-screen-xl px-25 py-12 sm:py-16">
+                    <div className="mx-auto max-w-screen-xl lg:px-25 lg:py-16">
                         <SectionBlock title="NEW TEAM">
                             <TeamGrid people={newTeam} />
                         </SectionBlock>
@@ -85,13 +85,13 @@ function TeamGrid({ people }: { people: Person[] }) {
                             priority={false}
                         />
                     </div>
-                    <div className="text-md break-words leading-tight text-black w-1/2">
+                    <div className="text-sm sm:text-md break-words leading-tight text-black lg:w-1/2">
                         <div className="font-semibold">
                             {p.name}
                         </div>
-                        <div className="border-t border-black my-3 w-5"></div>
+                        <div className="border-t border-black my-2 sm:my-3 w-5"></div>
                         {p.role && (
-                            <div className="text-sm italic">
+                            <div className="text-xs sm:text-sm italic">
                                 {p.role}
                             </div>
                         )}
@@ -118,7 +118,7 @@ function BoardGrid({ people }: { people: Person[] }) {
                             priority={false}
                         />
                     </div>
-                    <div className="text-[0.85rem] leading-tight text-black">
+                    <div className="text-sm sm:text-md leading-tight text-black">
                         <div className="border-t border-black my-3 w-5"></div>
                         <div className="font-semibold">
                             {p.name}
