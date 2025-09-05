@@ -2,14 +2,19 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getPersonBySlug, getPeople } from "@/data/people";
 
-type Props = { params: { slug: string } };
-
+/** Prebuild the static routes */
 export function generateStaticParams() {
     return getPeople().map(p => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: Props) {
-    const person = getPersonBySlug(params?.slug);
+/** In Next 15, params is a Promise — await it */
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ slug: string }>;
+}) {
+    const { slug } = await params;
+    const person = getPersonBySlug(slug);
     if (!person) return { title: "Person not found" };
     return {
         title: `${person.name} | Riverside Lyric Opera`,
@@ -21,7 +26,7 @@ export function generateMetadata({ params }: Props) {
     };
 }
 
-export default function PersonPage({ params }: Props) {
+export default function PersonPage({ params }: any) {
     const person = getPersonBySlug(params.slug);
     if (!person) return notFound();
 
