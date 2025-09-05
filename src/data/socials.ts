@@ -7,27 +7,27 @@ export type Social = {
 export const SOCIALS: Social[] = [
     {
         name: "Facebook",
-        href: "https://facebook.com/yourpage",
+        href: "https://www.facebook.com/Riversidelyricopera/",
         icon: "/icons/facebook.svg",
     },
     {
         name: "X",
-        href: "https://x.com/yourhandle",
+        href: "https://x.com/riverlyricopera",
         icon: "/icons/x.svg",
     },
     {
         name: "Instagram",
-        href: "https://instagram.com/yourhandle",
+        href: "https://www.instagram.com/riversidelyricopera/",
         icon: "/icons/instagram.svg",
     },
     {
         name: "YouTube",
-        href: "https://youtube.com/yourchannel",
+        href: "https://www.youtube.com/@riversidelyricopera5673",
         icon: "/icons/youtube.svg",
     },
-    //   {
-    //     name: "LinkedIn",
-    //     href: "https://linkedin.com/in/yourpage",
-    //     icon: "/icons/linkedin.svg",
-    //   },
+    {
+        name: "LinkedIn",
+        href: "https://www.linkedin.com/company/riverside-lyric-opera/",
+        icon: "/icons/linkedin.png",
+    }
 ];

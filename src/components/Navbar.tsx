@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const NAV_LINKS = [ 
+const NAV_LINKS = [
   { href: "/about", label: "ABOUT US" },
   { href: "/donate", label: "DONATE" }
 ];
@@ -19,8 +19,8 @@ export default function Navbar() {
     pathname === href || (href !== "/" && pathname.startsWith(href + "/"));
 
   return (
-    <header className="sticky top-0 z-50">
-      <nav className="bg-[#ecefee] md:h-[9rem] lg:h-[10rem] flex relative">
+    <header className="sticky top-0 z-50 border-b-2 border-brand-amber border-solid">
+      <nav className="bg-brand-turquoise md:h-[9rem] lg:h-[10rem] flex relative">
         {/* Logo / left side */}
         <Link
           href="/"
@@ -49,8 +49,8 @@ export default function Navbar() {
                     aria-current={active ? "page" : undefined}
                     className={["font-accent font-bold",
                       active
-                        ? "text-[#ff6830]"
-                        : "text-black hover:text-[#ff6830]",
+                        ? "text-brand-orange"
+                        : "text-black hover:text-brand-orange",
                     ].join(" ")}
                   >
                     {label}
@@ -73,7 +73,7 @@ export default function Navbar() {
         {open && (
           <div
             id="dropdown-menu"
-            className="absolute top-full left-0 w-full bg-[#ff6830] sm:hidden z-50"
+            className="absolute top-full left-0 w-full bg-brand-orange sm:hidden z-50"
           >
             <ul className="flex flex-col items-center space-y-10 py-8">
               {NAV_LINKS.map(({ href, label }) => {
