@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { PEOPLE, Person } from "@/data/people";
+import Link from "next/link";
 
 export default function AboutRLO() {
 
@@ -93,14 +94,16 @@ function TeamGrid({ people, type }: { people: Person[], type: 'team' | 'board' }
             {people.map((p) => (
                 <li key={p.name} className="space-y-2">
                     <div className={imgContainer}>
-                        <Image
-                            src={p.src}
-                            alt={p.name}
-                            fill
-                            className="object-cover grayscale"
-                            sizes={imgSizes}
-                            priority={false}
-                        />
+                        <Link href={`bio/${p.slug}`}>
+                            <Image
+                                src={p.src}
+                                alt={p.name}
+                                fill
+                                className="object-cover grayscale"
+                                sizes={imgSizes}
+                                priority={false}
+                            />
+                        </Link>
                     </div>
                     <div className="text-sm sm:text-md break-words leading-tight text-black font-subtitle lg:w-1/2">
                         <div className="font-bold">

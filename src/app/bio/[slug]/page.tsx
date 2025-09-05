@@ -1,0 +1,82 @@
+import Image from "next/image";
+import { notFound } from "next/navigation";
+import { getPersonBySlug, getPeople } from "@/data/people";
+
+type Props = { params: { slug: string } };
+
+export function generateStaticParams() {
+    return getPeople().map(p => ({ slug: p.slug }));
+}
+
+export function generateMetadata({ params }: Props) {
+    const person = getPersonBySlug(params.slug);
+    if (!person) return { title: "Person not found" };
+    return {
+        title: `${person.name} | Riverside Lyric Opera`,
+        description: person.bio?.[0]?.slice(0, 160) ?? `${person.name} bio`,
+        openGraph: {
+            title: `${person.name} | Riverside Lyric Opera`,
+            images: person.src ? [{ url: person.src }] : [],
+        },
+    };
+}
+
+export default function PersonPage({ params }: Props) {
+    const person = getPersonBySlug(params.slug);
+    if (!person) return notFound();
+
+    return (
+        <main className="min-h-screen bg-white/70">
+            {/* Framed content block */}
+            <section className="mx-auto max-w-[1100px] px-5 sm:px-8 pt-8 sm:pt-10">
+                {/* Header */}
+                <div className="px-6 sm:px-10 pt-8 sm:pt-12">
+                    <h1 className="font-accent font-bold text-9xl leading-[0.95] tracking-wide text-black">
+                        {person.name}
+                    </h1>
+                </div>
+
+                {/* Body: image left / bio right */}
+                <div className="px-6 sm:px-10 pb-10 sm:pb-14">
+                    <div className="mt-8 grid gap-8 grid-cols-2 md:items-start">
+                        {/* Column 1 */}
+                        <div>
+                            {/* Portrait */}
+                            <div className="relative w-full aspect-[4/5] overflow-hidden ring-1 ring-black/10 shadow-[0_20px_40px_rgba(0,0,0,0.25)] bg-white">
+                                <Image
+                                    src={person.src}
+                                    alt={person.name}
+                                    fill
+                                    className="object-cover grayscale"
+                                    priority
+                                />
+                            </div>
+                            {/* Optional artwork strip (if you have a secondary image like the mock) */}
+                            <div className="mt-8 h-40 w-full overflow-hidden rounded-md bg-neutral-200"></div>
+                        </div>
+
+                        {/* Column 2 */}
+                        <div>
+                            {/* Title */}
+                            {person.teamRole && (
+                                <p className="text-4xl tracking-wide text-[#a9451f] mb-8">
+                                    {person.teamRole}
+                                </p>
+                            )}
+
+                            {/* Bio paragraphs */}
+                            <article className="prose prose-neutral max-w-none text-[15px] leading-7 sm:text-[16px] sm:leading-8">
+                                {person.bio.map((para, i) => (
+                                    <p key={i} className="text-black/80">
+                                        {para}
+                                    </p>
+                                ))}
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+    );
+}
