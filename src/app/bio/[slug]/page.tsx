@@ -28,17 +28,17 @@ export default function PersonPage({ params }: Props) {
     return (
         <main className="min-h-screen bg-brand-turquoise">
             {/* Framed content block */}
-            <section className="mx-auto max-w-[1100px] px-5 sm:px-8 pt-8 sm:pt-10">
+            <section className="mx-auto max-w-[1300px] pt-8 sm:pt-10">
                 {/* Header */}
                 <div className="px-6 sm:px-10 pt-8 sm:pt-12">
-                    <h1 className="font-accent font-bold text-9xl leading-[0.95] tracking-wide text-black">
+                    <h1 className="font-accent font-bold text-8xl sm:text-9xl leading-[0.95] tracking-wide text-black">
                         {person.name}
                     </h1>
                 </div>
 
                 {/* Body: image left / bio right */}
-                <div className="px-6 sm:px-10 pb-10 sm:pb-14">
-                    <div className="mt-8 grid gap-8 grid-cols-2 md:items-start">
+                <div className="pb-10 sm:pb-14">
+                    <div className="mt-8 grid gap-8 grid-cols-1 sm:grid-cols-2 md:items-start">
                         {/* Column 1 */}
                         <div>
                             {/* Portrait */}
@@ -51,8 +51,15 @@ export default function PersonPage({ params }: Props) {
                                     priority
                                 />
                             </div>
-                            {/* Optional artwork strip (if you have a secondary image like the mock) */}
-                            <div className="mt-8 h-40 w-full overflow-hidden rounded-md bg-neutral-200"></div>
+                            {/* Artwork strip */}
+                            <div className="relative mt-8 h-35 w-full overflow-hidden bg-neutral-200">
+                                <Image
+                                    src="/banner.png"
+                                    alt="Monet banner"
+                                    priority={false}
+                                    fill
+                                />
+                            </div>
                         </div>
 
                         {/* Column 2 */}
@@ -70,7 +77,7 @@ export default function PersonPage({ params }: Props) {
                             )}
 
                             {/* Bio paragraphs */}
-                            <article className="prose prose-neutral max-w-none text-[15px] leading-7 sm:text-[16px] sm:leading-8">
+                            <article className="prose prose-neutral max-w-none text-sm leading-7 sm:leading-8">
                                 {person.bio.map((para, i) => (
                                     <p key={i} className="text-black/80">
                                         {para}

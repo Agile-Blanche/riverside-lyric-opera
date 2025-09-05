@@ -49,8 +49,8 @@ export default function Navbar() {
                     aria-current={active ? "page" : undefined}
                     className={["font-accent font-bold",
                       active
-                        ? "text-[#ff6830]"
-                        : "text-black hover:text-[#ff6830]",
+                        ? "text-brand-orange"
+                        : "text-black hover:text-brand-orange",
                     ].join(" ")}
                   >
                     {label}
@@ -73,7 +73,7 @@ export default function Navbar() {
         {open && (
           <div
             id="dropdown-menu"
-            className="absolute top-full left-0 w-full bg-[#ff6830] sm:hidden z-50"
+            className="absolute top-full left-0 w-full bg-brand-orange sm:hidden z-50"
           >
             <ul className="flex flex-col items-center space-y-10 py-8">
               {NAV_LINKS.map(({ href, label }) => {

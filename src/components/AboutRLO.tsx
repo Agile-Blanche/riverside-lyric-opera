@@ -75,6 +75,7 @@ function SectionBlock({
 
 
 function TeamGrid({ people, type }: { people: Person[], type: 'team' | 'board' }) {
+    const hoverShadow = "shadow-lg transition duration-300 ease-out group-hover:shadow-xl group-hover:-translate-y-2";
     const isTeamGrid = type === 'team' ? true : false;
 
     const gridClasses = isTeamGrid
@@ -82,8 +83,8 @@ function TeamGrid({ people, type }: { people: Person[], type: 'team' | 'board' }
         : "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 sm:gap-6";
 
     const imgContainer = isTeamGrid
-        ? "relative aspect-[2/3] overflow-hidden ring-1 ring-black/10"
-        : "relative aspect-square overflow-hidden ring-1 ring-black/10";
+        ? `relative aspect-[2/3] overflow-hidden ring-1 ring-black/10 ${hoverShadow}`
+        : `relative aspect-square overflow-hidden ring-1 ring-black/10 ${hoverShadow}`;
 
     const imgSizes = isTeamGrid
         ? "(max-width:768px) 35vw, (max-width:1024px) 30vw, 150px"

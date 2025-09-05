@@ -12,7 +12,7 @@ export default {
             colors: {
                 brand: {
                     turquoise: "#ecefee", // almost white
-                    orange: "#ff5f33",
+                    orange: "#ff6830",
                     cream: "#eaedec",
                     black: "#1f2937",
                     lilac: "#ded7ea",
