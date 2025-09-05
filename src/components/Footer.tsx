@@ -32,9 +32,9 @@ export default function Footer() {
                             Company Address
                         </h3>
                         <ul className="space-y-1 text-gray-300">
-                            {COMPANY.address.map((addressLine: string) => {
+                            {COMPANY.address.map((addressLine: string, i: number) => {
                                 return (
-                                    <li className="text-sm ps-3">{addressLine}</li>
+                                    <li key={i} className="text-sm ps-3">{addressLine}</li>
                                 )
                             })}
                         </ul>

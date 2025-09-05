@@ -25,9 +25,9 @@ export const SOCIALS: Social[] = [
         href: "https://www.youtube.com/@riversidelyricopera5673",
         icon: "/icons/youtube.svg",
     },
-    //   {
-    //     name: "LinkedIn",
-    //     href: "https://www.linkedin.com/company/riverside-lyric-opera/",
-    //     icon: "/icons/linkedin.svg",
-    //   },
+    {
+        name: "LinkedIn",
+        href: "https://www.linkedin.com/company/riverside-lyric-opera/",
+        icon: "/icons/linkedin.png",
+    }
 ];
