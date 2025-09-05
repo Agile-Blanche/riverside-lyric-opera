@@ -22,7 +22,7 @@ export const PEOPLE: Person[] = [
         name: "Anthony León",
         teamRole: "President & Artistic Director",
         boardRole: "President & Chairman",   // 👈 in both
-        src: "/images/team/anthony.png",
+        src: "/images/team/anthony.jpg",
         slug: "anthony-leon",
         teamIndex: 1,
         boardIndex: 3,
@@ -64,7 +64,7 @@ V ocal Studies studying under the tutelage of Bradley Williams.`
     {
         name: "Louis Lohrasbi",
         teamRole: "Music Director",
-        src: "/images/team/louis.png",
+        src: "/images/team/louis.jpeg",
         slug: "louis-lohrasbi",
         teamIndex: 2,
         bio: placeholderBio
@@ -73,7 +73,7 @@ V ocal Studies studying under the tutelage of Bradley Williams.`
         name: "Andrew León",
         teamRole: "CEO",
         boardRole: "Secretary",   // 👈 in both
-        src: "/images/team/andrew.png",
+        src: "/images/team/andrew.jpeg",
         slug: "andrew-leon",
         teamIndex: 3,
         boardIndex: 4,
@@ -83,7 +83,7 @@ V ocal Studies studying under the tutelage of Bradley Williams.`
         name: "Andrés Maldonado",
         teamRole: "CFO",
         boardRole: "Treasurer",   // 👈 in both
-        src: "/images/team/andres.png",
+        src: "/images/team/andres.JPG",
         slug: "andres-maldonado",
         teamIndex: 4,
         boardIndex: 5,
@@ -92,7 +92,7 @@ V ocal Studies studying under the tutelage of Bradley Williams.`
     {
         name: "Maia Aramburú",
         teamRole: "Artistic Advisor",
-        src: "/images/team/maia.png",
+        src: "/images/team/maia.jpg",
         slug: "maia-aramburu",
         teamIndex: 5,
         bio: [`Maia Aramburú's voice has been lauded by Opera Wire as having a “sweet and sparkling
@@ -137,7 +137,7 @@ Opera from the USC Thornton School of Music, under the tutelage of Elizabeth Hyn
     {
         name: "Stan Morrison",
         boardRole: "Board Member",
-        src: "/images/board/stan.png",
+        src: "/images/board/stan.jpg",
         slug: "stan-morrison",
         boardIndex: 1,
         bio: placeholderBio
@@ -145,7 +145,7 @@ Opera from the USC Thornton School of Music, under the tutelage of Elizabeth Hyn
     {
         name: "Daniel E. Olson",
         boardRole: "Board Member",
-        src: "/images/board/daniel.png",
+        src: "/images/board/daniel.jpg",
         slug: "daniel-olson",
         boardIndex: 2,
         bio: placeholderBio

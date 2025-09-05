@@ -15,7 +15,8 @@ export default {
                     orange: "#ff5f33",
                     cream: "#eaedec",
                     black: "#1f2937",
-                    lilac: "#ded7ea"
+                    lilac: "#ded7ea",
+                    amber: "#a9451f"
                 }
             }
         },

@@ -7,6 +7,7 @@
     --color-brand-turquoise: #ecefee;
     --color-brand-black: #1f2937;
     --color-brand-lilac: #ded7ea;
+    --color-brand-amber: #a9451f;
 
     /* (Optional) font family tokens — creates font-body, font-accent utilities */
     --font-body: var(--font-poppins), sans-serif;

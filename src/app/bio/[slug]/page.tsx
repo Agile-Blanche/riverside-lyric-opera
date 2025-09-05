@@ -9,7 +9,7 @@ export function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: Props) {
-    const person = getPersonBySlug(params.slug);
+    const person = getPersonBySlug(params?.slug);
     if (!person) return { title: "Person not found" };
     return {
         title: `${person.name} | Riverside Lyric Opera`,
@@ -26,7 +26,7 @@ export default function PersonPage({ params }: Props) {
     if (!person) return notFound();
 
     return (
-        <main className="min-h-screen bg-white/70">
+        <main className="min-h-screen bg-brand-turquoise">
             {/* Framed content block */}
             <section className="mx-auto max-w-[1100px] px-5 sm:px-8 pt-8 sm:pt-10">
                 {/* Header */}
@@ -59,8 +59,13 @@ export default function PersonPage({ params }: Props) {
                         <div>
                             {/* Title */}
                             {person.teamRole && (
-                                <p className="text-4xl tracking-wide text-[#a9451f] mb-8">
+                                <p className="text-4xl tracking-wide text-brand-amber mb-8">
                                     {person.teamRole}
+                                </p>
+                            )}
+                            {!person.teamRole && person.boardRole && (
+                                <p className="text-4xl tracking-wide text-brand-amber mb-8">
+                                    {person.boardRole}
                                 </p>
                             )}
 

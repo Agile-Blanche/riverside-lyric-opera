@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const NAV_LINKS = [ 
+const NAV_LINKS = [
   { href: "/about", label: "ABOUT US" },
   { href: "/donate", label: "DONATE" }
 ];
@@ -19,8 +19,8 @@ export default function Navbar() {
     pathname === href || (href !== "/" && pathname.startsWith(href + "/"));
 
   return (
-    <header className="sticky top-0 z-50">
-      <nav className="bg-[#ecefee] md:h-[9rem] lg:h-[10rem] flex relative">
+    <header className="sticky top-0 z-50 border-b-2 border-brand-amber border-solid">
+      <nav className="bg-brand-turquoise md:h-[9rem] lg:h-[10rem] flex relative">
         {/* Logo / left side */}
         <Link
           href="/"
