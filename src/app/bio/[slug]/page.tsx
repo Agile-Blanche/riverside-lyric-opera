@@ -31,18 +31,18 @@ export default function PersonPage({ params }: Props) {
             <section className="mx-auto max-w-[1300px] pt-8 sm:pt-10">
                 {/* Header */}
                 <div className="px-6 sm:px-10 pt-8 sm:pt-12">
-                    <h1 className="font-accent font-bold text-8xl sm:text-9xl leading-[0.95] tracking-wide text-black">
+                    <h1 className="font-accent font-bold text-7xl sm:text-9xl leading-[0.95] tracking-wide text-black">
                         {person.name}
                     </h1>
                 </div>
 
                 {/* Body: image left / bio right */}
-                <div className="pb-10 sm:pb-14">
+                <div className="pb-10 sm:pb-14 px-8 xl:px-0">
                     <div className="mt-8 grid gap-8 grid-cols-1 sm:grid-cols-2 md:items-start">
                         {/* Column 1 */}
-                        <div>
+                        <div className="m-auto sm:m-0">
                             {/* Portrait */}
-                            <div className="relative w-full aspect-[4/5] overflow-hidden ring-1 ring-black/10 shadow-[0_20px_40px_rgba(0,0,0,0.25)] bg-white">
+                            <div className="relative w-75 sm:w-full aspect-[4/5] overflow-hidden ring-1 ring-black/10 shadow-[0_20px_40px_rgba(0,0,0,0.25)] bg-white">
                                 <Image
                                     src={person.src}
                                     alt={person.name}
@@ -52,7 +52,7 @@ export default function PersonPage({ params }: Props) {
                                 />
                             </div>
                             {/* Artwork strip */}
-                            <div className="relative mt-8 h-35 w-full overflow-hidden bg-neutral-200">
+                            <div className="relative mt-8 h-20 sm:h-35 w-75 sm:w-full overflow-hidden bg-neutral-200">
                                 <Image
                                     src="/banner.png"
                                     alt="Monet banner"
@@ -63,7 +63,7 @@ export default function PersonPage({ params }: Props) {
                         </div>
 
                         {/* Column 2 */}
-                        <div>
+                        <div className="px-6 sm:px-0">
                             {/* Title */}
                             {person.teamRole && (
                                 <p className="text-4xl tracking-wide text-brand-amber mb-8">
