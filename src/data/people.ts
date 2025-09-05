@@ -1,7 +1,7 @@
 export type Person = {
     name: string;
-    role?: string;
-    groups: ("team" | "board")[]; // 👈 array of group tags
+    teamRole?: string;
+    boardRole?: string;
     src: string;
     slug: string;
     teamIndex?: number;
@@ -11,8 +11,8 @@ export type Person = {
 export const PEOPLE: Person[] = [
     {
         name: "Anthony León",
-        role: "President & Artistic Director",
-        groups: ["team", "board"],   // 👈 in both
+        teamRole: "President & Artistic Director",
+        boardRole: "President & Chairman",   // 👈 in both
         src: "/images/team/anthony.png",
         slug: "anthony-leon",
         teamIndex: 1,
@@ -20,16 +20,15 @@ export const PEOPLE: Person[] = [
     },
     {
         name: "Louis Lohrasbi",
-        role: "Music Director",
-        groups: ["team"],
+        teamRole: "Music Director",
         src: "/images/team/louis.png",
         slug: "louis-lohrasbi",
         teamIndex: 2
     },
     {
         name: "Andrew León",
-        role: "CEO",
-        groups: ["team", "board"],   // 👈 in both
+        teamRole: "CEO",
+        boardRole: "Secretary",   // 👈 in both
         src: "/images/team/andrew.png",
         slug: "andrew-leon",
         teamIndex: 3,
@@ -37,8 +36,8 @@ export const PEOPLE: Person[] = [
     },
     {
         name: "Andrés Maldonado",
-        role: "CFO",
-        groups: ["team", "board"],   // 👈 in both
+        teamRole: "CFO",
+        boardRole: "Treasurer",   // 👈 in both
         src: "/images/team/andres.png",
         slug: "andres-maldonado",
         teamIndex: 4,
@@ -46,22 +45,21 @@ export const PEOPLE: Person[] = [
     },
     {
         name: "Maia Aramburú",
-        role: "Artistic Advisor",
-        groups: ["team"],
+        teamRole: "Artistic Advisor",
         src: "/images/team/maia.png",
         slug: "maia-aramburu",
         teamIndex: 5
     },
     {
         name: "Stan Morrison",
-        groups: ["board"],
+        boardRole: "Board Member",
         src: "/images/board/stan.png",
         slug: "stan-morrison",
         boardIndex: 1
     },
     {
         name: "Daniel E. Olson",
-        groups: ["board"],
+        boardRole: "Board Member",
         src: "/images/board/daniel.png",
         slug: "daniel-olson",
         boardIndex: 2
