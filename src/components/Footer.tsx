@@ -47,7 +47,7 @@ export default function Footer() {
                         </h3>
                         <div className="flex items-center gap-4 ps-3">
                             {SOCIALS.map((s) => (
-                                <Link key={s.name} href={s.href} aria-label={s.name}>
+                                <Link key={s.name} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.name}>
                                     <div className="h-10 w-10 flex items-center justify-center rounded-full bg-brand-orange hover:bg-orange-600 transition">
                                         <Image
                                             src={s.icon}
