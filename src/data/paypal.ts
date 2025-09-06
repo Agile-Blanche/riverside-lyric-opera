@@ -1,0 +1,1 @@
+export const PAYPAL_LINK = "https://www.paypal.com/ncp/payment/HKJTSKN3AK89Q"

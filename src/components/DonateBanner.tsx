@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Music2 } from 'lucide-react'
 import Image from 'next/image'
+import { PAYPAL_LINK } from '@/data/paypal'
 
 const DonateBanner = () => {
     return (
@@ -28,7 +29,7 @@ const DonateBanner = () => {
                 </h3>
 
                 <Link
-                    href="https://www.paypal.com/donate" // 👈 replace with your real donation link
+                    href={PAYPAL_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
