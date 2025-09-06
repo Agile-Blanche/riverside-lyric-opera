@@ -93,14 +93,14 @@ function TeamGrid({ people, type }: { people: Person[], type: 'team' | 'board' }
     return (
         <ul className={gridClasses}>
             {people.map((p) => (
-                <li key={p.name} className="space-y-2">
+                <li key={p.name} className="space-y-2 transition-transform duration-500 ease-out hover:scale-110 hover:brightness-125">
                     <div className={imgContainer}>
                         <Link href={`bio/${p.slug}`}>
                             <Image
                                 src={p.src}
                                 alt={p.name}
                                 fill
-                                className="object-cover grayscale"
+                                className="object-cover grayscale object-top scale-105"
                                 sizes={imgSizes}
                                 priority={false}
                             />
