@@ -18,7 +18,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Riverside Lyric Opera",
-  description: "Riverside Lyric Opera",
+  description: "Riverside Lyric Opera is a non-profit organization in Riverside, California, dedicated to celebrating and sharing classical and opera music.",
   icons: {
     icon: "/favicon.png",
   },
