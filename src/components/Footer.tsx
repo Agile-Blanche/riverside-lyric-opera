@@ -5,38 +5,38 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-12 font-accent">
+    <footer className="bg-black text-white pb-12 pt-4 font-accent pl-5">
       {/* Logo */}
-      <div className="mx-3">
+      <div className="flex justify-center md:justify-start">
         <Image
           src="/images/footer-logo.png"
           alt="RLO logo"
           width={200}
           height={60}
-          className="w-100 h-auto"
+          className="w-100 h-auto pl-3"
         />
       </div>
 
-      <div className="mx-auto max-w-screen-xl px-12">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
+      <div className="md:ml-9 max-w-screen-xl flex justify-center md:justify-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-5">
           {/* Contact info */}
           <div>
-            <h3 className="text-md font-bold tracking-widest uppercase mb-2">
+            <h3 className="text-lg font-bold tracking-[.3rem] uppercase mb-2 text-center md:text-left">
               Company Phone
             </h3>
             <ul className="space-y-1 text-gray-300">
-              <li className="text-sm ps-3">{COMPANY.phone}</li>
+              <li className="text-lg ps-3 font-bold text-center md:text-left">{COMPANY.phone}</li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-md font-bold tracking-widest uppercase mb-2">
+            <h3 className="text-lg font-bold tracking-[.3rem] uppercase mb-3 text-center md:text-left">
               Company Address
             </h3>
-            <ul className="space-y-1 text-gray-300">
+            <ul className="space-y-1 text-gray-300 font-bold text-center md:text-left">
               {COMPANY.address.map((addressLine: string, i: number) => {
                 return (
-                  <li key={i} className="text-sm ps-3">
+                  <li key={i} className="text-lg ps-3">
                     {addressLine}
                   </li>
                 );
@@ -46,10 +46,10 @@ export default function Footer() {
 
           {/* Social icons */}
           <div>
-            <h3 className="text-md font-bold tracking-widest uppercase mb-4">
+            <h3 className="text-lg font-bold tracking-[.3rem] uppercase mb-4 text-center md:text-left">
               Socials
             </h3>
-            <div className="flex items-center gap-4 ps-3">
+            <div className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 ps-3 flex-wrap">
               {SOCIALS.map((s) => (
                 <Link
                   key={s.name}
