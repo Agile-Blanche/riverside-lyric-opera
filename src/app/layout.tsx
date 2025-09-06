@@ -19,6 +19,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Riverside Lyric Opera",
   description: "Riverside Lyric Opera",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
