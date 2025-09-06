@@ -52,7 +52,7 @@ export default function PersonPage({ params }: any) {
                                     src={person.src}
                                     alt={person.name}
                                     fill
-                                    className="object-cover grayscale"
+                                    className="object-cover"
                                     priority
                                 />
                             </div>
