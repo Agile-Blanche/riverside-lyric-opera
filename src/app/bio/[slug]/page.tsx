@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getPersonBySlug, getPeople } from "@/data/people";
+import FadeInOnMount from "@/components/FadeInOnMount";
 
 /** Prebuild the static routes */
 export function generateStaticParams() {
@@ -32,68 +33,70 @@ export default function PersonPage({ params }: any) {
 
     return (
         <main className="min-h-screen bg-brand-turquoise">
-            {/* Framed content block */}
-            <section className="mx-auto max-w-[1300px] pt-8 sm:pt-10">
-                {/* Header */}
-                <div className="px-6 sm:px-10 pt-8 sm:pt-12">
-                    <h1 className="font-accent font-bold text-7xl sm:text-9xl leading-[0.95] tracking-wide text-black">
-                        {person.name}
-                    </h1>
-                </div>
-
-                {/* Body: image left / bio right */}
-                <div className="pb-10 sm:pb-14 px-8 xl:px-0">
-                    <div className="mt-8 grid gap-8 grid-cols-1 sm:grid-cols-2 md:items-start">
-                        {/* Column 1 */}
-                        <div className="m-auto sm:m-0">
-                            {/* Portrait */}
-                            <div className="relative w-75 sm:w-full aspect-[4/5] overflow-hidden ring-1 ring-black/10 shadow-[0_20px_40px_rgba(0,0,0,0.25)] bg-white">
-                                <Image
-                                    src={person.src}
-                                    alt={person.name}
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                />
-                            </div>
-                            {/* Artwork strip */}
-                            <div className="relative mt-8 h-20 sm:h-35 w-75 sm:w-full overflow-hidden bg-neutral-200">
-                                <Image
-                                    src="/banner.png"
-                                    alt="Monet banner"
-                                    priority={false}
-                                    fill
-                                />
-                            </div>
-                        </div>
-
-                        {/* Column 2 */}
-                        <div className="px-6 sm:px-0">
-                            {/* Title */}
-                            {person.teamRole && (
-                                <p className="text-4xl tracking-wide text-brand-amber mb-8">
-                                    {person.teamRole}
-                                </p>
-                            )}
-                            {!person.teamRole && person.boardRole && (
-                                <p className="text-4xl tracking-wide text-brand-amber mb-8">
-                                    {person.boardRole}
-                                </p>
-                            )}
-
-                            {/* Bio paragraphs */}
-                            <article className="prose prose-neutral max-w-none text-sm leading-7 sm:leading-8">
-                                {person.bio.map((para, i) => (
-                                    <p key={i} className="text-black/80">
-                                        {para}
-                                    </p>
-                                ))}
-                            </article>
-                        </div>
-
+            <FadeInOnMount>
+                {/* Framed content block */}
+                <section className="mx-auto max-w-[1300px] pt-8 sm:pt-10">
+                    {/* Header: person name */}
+                    <div className="px-6 sm:px-10 pt-8 sm:pt-12">
+                        <h1 className="font-accent font-bold text-7xl sm:text-9xl leading-[0.95] tracking-wide text-black">
+                            {person.name}
+                        </h1>
                     </div>
-                </div>
-            </section>
+
+                    {/* Body: image left / bio right */}
+                    <div className=" pb-10 sm:pb-14 px-8 xl:px-4">
+                        <div className="mt-8 grid gap-8 grid-cols-1 sm:grid-cols-2 md:items-start">
+                            {/* Column 1 */}
+                            <div className="m-auto sm:m-0">
+                                {/* Portrait */}
+                                <div className="relative w-75 sm:w-full aspect-[4/5] overflow-hidden ring-1 ring-black/10 shadow-[0_20px_40px_rgba(0,0,0,0.25)] bg-white">
+                                    <Image
+                                        src={person.src}
+                                        alt={person.name}
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                    />
+                                </div>
+                                {/* Artwork strip */}
+                                <div className="relative mt-8 h-20 sm:h-35 w-75 sm:w-full overflow-hidden bg-neutral-200">
+                                    <Image
+                                        src="/banner.png"
+                                        alt="Monet banner"
+                                        priority={false}
+                                        fill
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Column 2 */}
+                            <div className="px-6 sm:px-0">
+                                {/* Title */}
+                                {person.teamRole && (
+                                    <p className="text-4xl tracking-wide text-brand-amber mb-8">
+                                        {person.teamRole}
+                                    </p>
+                                )}
+                                {!person.teamRole && person.boardRole && (
+                                    <p className="text-4xl tracking-wide text-brand-amber mb-8">
+                                        {person.boardRole}
+                                    </p>
+                                )}
+
+                                {/* Bio paragraphs */}
+                                <article className="prose prose-neutral max-w-none text-sm leading-7 sm:leading-8">
+                                    {person.bio.map((para, i) => (
+                                        <p key={i} className="text-black/80">
+                                            {para}
+                                        </p>
+                                    ))}
+                                </article>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </FadeInOnMount>
         </main>
     );
 }
