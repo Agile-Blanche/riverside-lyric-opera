@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const DonateBanner = () => {
     return (
-        <section className="relative w-full h-145 font-accent">
+        <section className="relative w-full h-145 font-accent scroll-mt-20" id='donate'>
             {/* Background */}
             <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
                 {/* Purple */}

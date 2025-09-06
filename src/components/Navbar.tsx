@@ -5,10 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import SmoothLink from "./SmoothLink";
 
 const NAV_LINKS = [
-  { href: "/about", label: "ABOUT US" },
-  { href: "/donate", label: "DONATE" }
+  { href: "/#about", label: "ABOUT US" },
+  { href: "/#donate", label: "DONATE" },
 ];
 
 export default function Navbar() {
@@ -44,17 +45,17 @@ export default function Navbar() {
               const active = isActive(href);
               return (
                 <li key={href}>
-                  <Link
+                  <SmoothLink
                     href={href}
-                    aria-current={active ? "page" : undefined}
-                    className={["font-accent font-bold",
+                    label={label}
+                    active={active}
+                    className={[
+                      "font-accent font-bold",
                       active
                         ? "text-brand-orange"
                         : "text-black hover:text-brand-orange",
                     ].join(" ")}
-                  >
-                    {label}
-                  </Link>
+                  />
                 </li>
               );
             })}
@@ -80,18 +81,15 @@ export default function Navbar() {
                 const active = isActive(href);
                 return (
                   <li key={href}>
-                    <Link
+                    <SmoothLink
                       href={href}
+                      label={label}
+                      active={active}
                       onClick={() => setOpen(false)} // close menu after click
-                      aria-current={active ? "page" : undefined}
                       className={
-                        active
-                          ? "text-black"
-                          : "text-white hover:text-black"
+                        active ? "text-black" : "text-white hover:text-black"
                       }
-                    >
-                      {label}
-                    </Link>
+                    />
                   </li>
                 );
               })}
