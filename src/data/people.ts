@@ -108,7 +108,10 @@ power of music to audiences around the world.`
         slug: "andrew-leon",
         teamIndex: 3,
         boardIndex: 4,
-        bio: placeholderBio
+        bio: [
+            `Andrew A. León serves as CEO and Secretary of Riverside Lyric Opera, bringing a dynamic blend of creative leadership and strategic insight to the organization. With a strong background in healthcare management and nonprofit leadership, Andrew leads with a people first mindset, fostering collaboration across artistic, administrative, and community focused teams.`,
+            `He holds an MBA in Healthcare Management from La Sierra University, where he was honored with the President’s Award for academic excellence and leadership, as well as a BS in Business. Prior to joining Riverside Lyric Opera, Andrew honed his skills across diverse sectors from patient experience strategy at Prime Healthcare to ministry leadership and creative production roles. His experience spans service improvement, project planning, and team development, all grounded in a deep passion for the arts and community impact.`
+        ]
     },
     {
         name: "Andrés Maldonado",
