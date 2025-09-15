@@ -1,1 +1,1 @@
-export const PAYPAL_LINK = "https://www.paypal.com/ncp/payment/HKJTSKN3AK89Q"
+export const PAYPAL_LINK = "https://www.paypal.com/donate?hosted_button_id=WFZXLDPEQXLRS"
