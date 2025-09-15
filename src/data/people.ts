@@ -38,13 +38,13 @@ important opera competition in the world — where he also won the Don Plácido 
 Zarzuela Prize. He has additionally been awarded a Career Development Grant from the
 Sullivan Foundation. Other recognitions include being featured in Opera News magazine and
 being named “Best Up-and-Comer” in Inland Empire Magazine’s “Best of the Best 2019” list.`,
-`Anthony has made major debuts on leading stages around the world. In 2025, he sings
+            `Anthony has made major debuts on leading stages around the world. In 2025, he sings
 Ferrando in Mozart’s Così fan tutte at LA Opera, Nadir in Bizet’s Les pêcheurs de perles at the
 Staatsoper Unter den Linden in Berlin, Lysander in Britten’s A Midsummer Night’s Dream at
 Opera Theatre of St. Louis, Don Ottavio in Mozart’s Don Giovanni with Teatro dell’Opera di
 Roma at the Caracalla Festival, and appears in concert with Mozart’s Mass in C Minor at the
 Salzburg Festival.`,
-`He has performed on prestigious stages including The Metropolitan Opera, Los Angeles Opera,
+            `He has performed on prestigious stages including The Metropolitan Opera, Los Angeles Opera,
 the Hollywood Bowl, Salzburg’s Mozarteum, Santa Fe Opera, Carnegie Hall, Théâtre des
 Champs-Élysées, Victoria Hall, and many others. Notable recent performances include creating
 the role of The Consumer in the world premiere of Ellen Reid’s The Shell Trial at Dutch National
@@ -52,23 +52,23 @@ Opera in Amsterdam, and performances with The Santa Fe Symphony, Cologne Opera i
 Germany, the Aix-en-Provence Festival in France, the Ravinia Festival with the Chicago
 Symphony, and with the LA Philharmonic at the Hollywood Bowl under the direction of Gustavo
 Dudamel.`,
-`Looking ahead to the 2025/26 season, Anthony will appear at Teatro Regio in Turin, Lyric Opera
+            `Looking ahead to the 2025/26 season, Anthony will appear at Teatro Regio in Turin, Lyric Opera
 of Chicago, return to LA Opera and Walt Disney Concert Hall with Gustavo Dudamel, the
 Glyndebourne Festival, and more.`,
-`Anthony holds a Bachelor of Music degree from La Sierra University and a Master of Music
+            `Anthony holds a Bachelor of Music degree from La Sierra University and a Master of Music
 degree in Vocal Performance from the New England Conservatory of Music in Boston, where he
 was awarded the Wendy Shattuck ’75 Presidential Scholarship for Vocal Studies, studying
 under the tutelage of Bradley Williams.`,
-`In addition to his international performing career, Anthony is proud to serve his home community
+            `In addition to his international performing career, Anthony is proud to serve his home community
 as the new President and Artistic Director of Riverside Lyric Opera, where he brings his
 vision, artistry, and leadership to further enrich the cultural life of the Inland Empire.`
         ]
     },
     {
-        name: "Louis Lohrasbi",
+        name: "Louis Lohraseb",
         teamRole: "Music Director",
         src: "/images/team/louis.jpeg",
-        slug: "louis-lohrasbi",
+        slug: "louis-lohraseb",
         teamIndex: 2,
         bio: [
             `Since making his professional debut at the Teatro dell’Opera di Roma in 2019, Louis
@@ -76,7 +76,7 @@ Lohraseb has quickly earned a reputation as one of the most exciting young condu
 on the international stage. His work has already brought him to leading houses including
 the Semperoper Dresden, Los Angeles Opera, Staatsoper Hamburg, and Komische
 Oper Berlin.`,
-`Highlights of the 2024–25 season include returns to Sarasota Opera (Le Nozze di
+            `Highlights of the 2024–25 season include returns to Sarasota Opera (Le Nozze di
 Figaro) and Indiana University Opera Theatre (Carmen), as well as debuts with Rice
 University (Alcina) and the Baton Rouge Symphony Orchestra. Following his acclaimed
 Los Angeles Opera debut conducting Tosca, Mr. Lohraseb was immediately invited back
@@ -84,16 +84,16 @@ for Il Barbiere di Siviglia and La Traviata. Other recent credits include Le Noz
 Figaro at Staatsoper Hamburg, Carmen at Semperoper Dresden, La Traviata at
 Komische Oper Berlin, and appearances with San Francisco Opera, Atlanta Opera,
 Oakland Symphony, Peoria Symphony, and the Wintergreen Music Festival.`,
-`An accomplished pianist as well as conductor, he is a frequent recital and chamber
+            `An accomplished pianist as well as conductor, he is a frequent recital and chamber
 music collaborator with artists including Erica Petrocelli, Liv Redpath, Charles
 Castronovo, Taylor Raven, Eric Silberger, Madalyn Parnas, and Cicely Parnas.`,
-`Mr. Lohraseb’s artistry has been recognized with numerous honors, including the Solti
+            `Mr. Lohraseb’s artistry has been recognized with numerous honors, including the Solti
 Foundation U.S. Career Assistance Award (2022) and the Eva and Marc Stein Artist
 Award (2024) from Los Angeles Opera. A former member of the Domingo-Colburn-Stein
 Young Artist Program at Los Angeles Opera, he has worked closely with music director
 James Conlon and conducted alongside leading figures such as Lorin Maazel, John
 Adams, and Krzysztof Penderecki.`,
-`Born to Iranian and Italian parents, Mr. Lohraseb graduated summa cum laude from
+            `Born to Iranian and Italian parents, Mr. Lohraseb graduated summa cum laude from
 SUNY Geneseo as an Edgar Fellow, studied conducting at the Yale School of Music,
 and pursued further postgraduate training at Indiana University Jacobs School of Music.
 His career reflects both extraordinary talent and a deep commitment to bringing the
@@ -108,7 +108,10 @@ power of music to audiences around the world.`
         slug: "andrew-leon",
         teamIndex: 3,
         boardIndex: 4,
-        bio: placeholderBio
+        bio: [
+            `Andrew A. León serves as CEO and Secretary of Riverside Lyric Opera, bringing a dynamic blend of creative leadership and strategic insight to the organization. With a strong background in healthcare management and nonprofit leadership, Andrew leads with a people first mindset, fostering collaboration across artistic, administrative, and community focused teams.`,
+            `He holds an MBA in Healthcare Management from La Sierra University, where he was honored with the President’s Award for academic excellence and leadership, as well as a BS in Business. Prior to joining Riverside Lyric Opera, Andrew honed his skills across diverse sectors from patient experience strategy at Prime Healthcare to ministry leadership and creative production roles. His experience spans service improvement, project planning, and team development, all grounded in a deep passion for the arts and community impact.`
+        ]
     },
     {
         name: "Andrés Maldonado",
@@ -126,13 +129,13 @@ Telemedicine budget for 14 different telehealth and virtual care specialties and
 across all hospitals. Known for his strategic problem-solving and operational expertise,
 he excels at optimizing workflows, ensuring regulatory compliance, and delivering
 high-quality patient care through cutting-edge virtual health solutions.`,
-`Andres brings a unique blend of technical expertise and financial acumen, backed by an
+            `Andres brings a unique blend of technical expertise and financial acumen, backed by an
 MBA from the Zapara School of Business and certifications from UCLA in Accounting.
 Fluent in English, Spanish, and Portuguese, he’s a global-minded innovator who thrives
 in complex, fast-paced environments. Beyond the boardroom, Andres is a bass singer
 with vocal performances as Betto in Gianni Schicchi and Bass Choir in the "Oh My Son"
 Opera at the Walt Disney Concert Hall.`,
-`In his personal time Andreas is an avid mountain biker and a passionate photographer.
+            `In his personal time Andrés is an avid mountain biker and a passionate photographer.
 Whether he’s hiking with his wife or orchestrating transformative healthcare solutions,
 Andres approaches every challenge with creativity, precision, and an unstoppable drive
 for excellence.`
@@ -155,7 +158,7 @@ de Lima to perform a solo concert in their 2024 season, as well as performing in
 Festival with the Ravinia Steans Institute this past summer.`,
             `Her roles include Mimì in La bohème, Rosalba in Florencia en el Amazonas, Anita in La
 Navarraise, Susanna in Le nozze di Figaro, L’Ensolleiad in Chèrubin, Fiordiligi in Così fan
-tutte, Minskwoman in Flight, Mrs. Hayes in Susannah, Lauretta in Gianni Schicchi, Dorothée
+tutte, Minskwoman in Flight, Mrs. Hayes in Susannah, Lauretta in Gianni Schicchi, at La Sierra University, Dorothée
 in Cendrillon, Papagena in Die Zauberflöte, among others. These debuted at major festivals
 and companies such as the Yale Opera, Janiec Opera Company at the Brevard Music
 Center, USC Opera Theatre, the Berlin Opera Academy, the LAH-SOW at the Academy of
@@ -199,24 +202,24 @@ different California universities — the University of the Pacific, USC, and Sa
 — to the NCAA tournament. His players and peers celebrated him not only for his
 victories, but for the way he inspired young people to reach for more, both in sports and
 in life.`,
-`When Stan transitioned from coaching to leadership at UC Riverside, he guided the
+            `When Stan transitioned from coaching to leadership at UC Riverside, he guided the
 university’s athletic program through a historic move from Division II to Division I. For 12
 years as Director of Intercollegiate Athletics, he worked tirelessly to create opportunities
 for student-athletes to compete, grow, and represent Riverside on a national stage.`,
-`In the business sector, Morrison served as Senior Vice President for Business
+            `In the business sector, Morrison served as Senior Vice President for Business
 Development at Pacific Premier Bank. However, the community has long recognized
 Stan as more than a coach or administrator. He has been honored as “Distinguished
 Citizen of the Year” by the Boy Scouts of America, “Citizen of the Year” by the Riverside
 Chamber of Commerce, and the recipient of UC Berkeley’s prestigious “Pete Newell
 Career Achievement Award.” In 2017, he was presented with the Ronald O. Loveridge
 “Distinguished Community Leader Award,” a fitting tribute to his decades of service.`,
-`What truly defines Stan, however, is his heart for people. He has devoted his energy to
+            `What truly defines Stan, however, is his heart for people. He has devoted his energy to
 organizations that strengthen lives across Riverside and beyond, from Path of Life
 Ministries and the Mission Inn Foundation to cancer research, adoption advocacy, and
 the Riverside Arts Council. His work reflects a deep belief that the arts, athletics,
 education, and service all play vital roles in shaping a stronger, more compassionate
 community.`,
-`At Riverside Lyric Opera, we are proud to celebrate Stan Morrison not only for his
+            `At Riverside Lyric Opera, we are proud to celebrate Stan Morrison not only for his
 remarkable accomplishments, but for his enduring commitment to bringing people
 together, uplifting the next generation, and enriching the cultural life of our city. His story
 reminds us that when we share our talents and passions, we create harmony that
@@ -234,7 +237,7 @@ resonates far beyond the stage.`
 served on the Board of Directors since the company’s inception. In addition to his
 leadership role, Dan has also shared his musical talents on stage, most often as a
 member of the chorus.`,
-`Dan’s educational journey reflects both his love of music and his dedication to service.
+            `Dan’s educational journey reflects both his love of music and his dedication to service.
 He holds a Bachelor of Arts in Music Theory and Composition from Seattle Pacific
 University, a Bachelor of Music in History and Literature from Pacific Lutheran
 University, and a Juris Doctor from Pepperdine University School of Law. Since 1980,
@@ -243,21 +246,21 @@ law, general business and civil litigation, family law, and probate. His legal s
 extended into the courtroom as a Judge Pro Tem, as well as an Arbitrator and Mediator
 with the Riverside County Bar Association, Superior Court, and the California Court of
 Appeals.`,
-`Music and the arts have always been central to Dan’s life. For 20 years he performed
+            `Music and the arts have always been central to Dan’s life. For 20 years he performed
 with the Pacific Chorale and also served on the Board of Directors of the Performing
 Arts Association of Orange County. His passion for community service extends far
 beyond music. He has held leadership roles in the Riverside Optimist Club, served on
 the City of Riverside Airport Commission, and contributed his expertise as an Alternate
 Commissioner for the Riverside County Airport Land Use Commission.`,
-`A veteran of the U.S. Navy, Dan served as a Communications Officer on an aircraft
+            `A veteran of the U.S. Navy, Dan served as a Communications Officer on an aircraft
 carrier during the Vietnam era. He has also been active with the Civil Air Patrol, where
 he has served as Squadron Commander, Deputy Group Commander, and Deputy
 Director of Legal Affairs (JAG) for both the California Wing and the Pacific Region.`,
-`Today, Dan continues his commitment to service as a board member of several
+            `Today, Dan continues his commitment to service as a board member of several
 nonprofit organizations, including the Drug Alternative Program, Hyveth Williams
 Ministries, and Precious Hearts Academy, a school for autistic and developmentally
 disabled children.`,
-`Dan is deeply proud of his family — he is married, with four children and ten
+            `Dan is deeply proud of his family — he is married, with four children and ten
 grandchildren — and brings that same spirit of dedication and care to his work with
 Riverside Lyric Opera. His life’s work reflects his belief in the power of service, the arts,
 and community to enrich lives and inspire generations.`

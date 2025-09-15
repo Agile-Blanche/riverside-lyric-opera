@@ -44,7 +44,7 @@ export default function PersonPage({ params }: any) {
                     </div>
 
                     {/* Body: image left / bio right */}
-                    <div className=" pb-10 sm:pb-14 px-8 xl:px-4">
+                    <div className=" pb-10 sm:pb-14 px-4 xs:px-8 xl:px-4">
                         <div className="mt-8 grid gap-8 grid-cols-1 sm:grid-cols-2 md:items-start">
                             {/* Column 1 */}
                             <div className="m-auto sm:m-0">
@@ -86,7 +86,7 @@ export default function PersonPage({ params }: any) {
                                 {/* Bio paragraphs */}
                                 <article className="prose prose-neutral max-w-none text-sm leading-7 sm:leading-8">
                                     {person.bio.map((para, i) => (
-                                        <p key={i} className="text-black/80">
+                                        <p key={i} className="text-black/80 mb-2">
                                             {para}
                                         </p>
                                     ))}
