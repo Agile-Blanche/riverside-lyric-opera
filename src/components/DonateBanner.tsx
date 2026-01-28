@@ -16,22 +16,22 @@ const DonateBanner = () => {
         viewBox="0 0 100 100"
       >
         {/* Purple */}
-        <polygon points="0,0 100,0 100,100 45,100" fill="#ded7ea" />
-        {/* Cream (light turquoise) */}
-        <polygon points="0,0 55,0 45,100 0,100" fill="#ecefee" />
+        <polygon points="0,0 100,0 100,100 45,100" fill="#ded6eb" />
+        {/* white (light white) */}
+        <polygon points="0,0 55,0 45,100 0,100" fill="#FFFFFF" />
       </svg>
 
       {/* Text Content */}
       <div className="relative z-10 h-full flex flex-col items-start justify-evenly py-15 md:py-18 w-xl md:w-5xl pl-20 px-5 m-auto max-w-dvw">
         <span className="flex items-center">
-          <h1 className="text-brand-orange text-4xl xs:text-5xl md:text-7xl tracking-normal md:me-7 font-bold">
+          <h1 className="text-brand-orange text-4xl xs:text-5xl md:text-7xl tracking-normal md:me-7 font-bold headline-font">
             Become a part of RLO
           </h1>
 
           <Music2 className="text-black size-20 md:size-25 shrink-0 pt-5" />
         </span>
 
-        <h3 className="mt-3 md:mt-3 text-2xl md:text-5xl text-black tracking-wider leading-15 xs:leading-30 md:leading-20 font-bold max-w-9/10">
+        <h3 className="mt-3 md:mt-3 text-2xl md:text-5xl text-black tracking-wider leading-15 xs:leading-30 md:leading-20 font-bold body-font max-w-9/10">
           Opera needs you! Donate now to support the arts and inspire audiences
           of the future.
         </h3>
@@ -58,7 +58,7 @@ const DonateBanner = () => {
             priority
           />
         </Link>
-        <p className="mt-3 text-lg leading-snug text-gray-700">
+        <p className="mt-3 text-lg body-font leading-snug text-gray-700">
           Riverside Lyric Opera is a{" "}
           <span className="whitespace-nowrap">501(c)(3)</span> tax-exempt
           nonprofit organization. Donations are tax-deductible

@@ -21,26 +21,26 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b-2 border-brand-amber border-solid">
-      <nav className="bg-brand-turquoise md:h-[9rem] lg:h-[10rem] flex relative">
+      <nav className="bg-brand-white md:h-[9rem] lg:h-[10rem] flex relative">
         {/* Logo / left side */}
         <Link
           href="/"
-          className="my-5 ml-8 sm:ml-12 inline-block hover:cursor-pointer hover:opacity-90"
+          className="inline-block hover:cursor-pointer hover:opacity-90"
           aria-label="Go to homepage"
         >
           <Image
-            src="/faux-logo.png"
+            src="/logo.svg"
             alt="Riverside Lyric Opera Logo"
             width={95}
             height={95}
             priority
-            className="md:w-30 md:h-20 lg:w-40 lg:h-30"
+            className="sm:ml-3 md:ml-0 md:w-63 md:h-37 lg:w-70  lg:h-41"
           />
         </Link>
 
         {/* Right side: links + hamburger */}
         <div className="flex ml-auto space-x-12 items-start">
-          <ul className="hidden sm:flex space-x-12 items-center pt-7 md:pt-12 sm:text-sm lg:text-base">
+          <ul className="hidden sm:flex space-x-12 items-center pt-5 md:pt-10 lg:pt-12 sm:text-sm md:text-base">
             {NAV_LINKS.map(({ href, label }) => {
               const active = isActive(href);
               return (
@@ -50,7 +50,7 @@ export default function Navbar() {
                     label={label}
                     active={active}
                     className={[
-                      "font-accent font-bold",
+                      "headline-font font-bold",
                       active
                         ? "text-brand-orange"
                         : "text-black hover:text-brand-orange",
@@ -62,7 +62,7 @@ export default function Navbar() {
           </ul>
           <button
             onClick={() => setOpen(!open)}
-            className="text-black pr-9 pt-7 hover:cursor-pointer hover:opacity-90 sm:hidden"
+            className="text-black pr-9 pt-4 hover:cursor-pointer hover:opacity-90 sm:hidden"
             aria-label="Expand Menu"
             aria-expanded={open}
             aria-controls="dropdown-menu"

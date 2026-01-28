@@ -32,7 +32,7 @@ export default function PersonPage({ params }: any) {
     if (!person) return notFound();
 
     return (
-        <main className="min-h-screen bg-brand-turquoise">
+        <main className="min-h-screen bg-brand-white">
             <FadeInOnMount>
                 {/* Framed content block */}
                 <section className="mx-auto max-w-[1300px] pt-8 sm:pt-10">

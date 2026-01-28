@@ -11,13 +11,13 @@ export default function AboutRLO() {
 
     return (
         <section className="w-full scroll-mt-20" id="about">
-            <div className="bg-brand-cream px-6 sm:px-15 pt-10 sm:pt-14">
+            <div className="bg-brand-white px-6 sm:px-15 pt-10 sm:pt-14">
                 <div className="p-8 sm:p-12 border-t-10 border-l-10 border-r-10 border-brand-orange">
-                    <h1 className="pt-8 font-accent font-bold text-8xl tracking-wider text-center text-brand-black">
+                    <h1 className="pt-8 headline-font font-bold text-8xl tracking-wider text-center text-brand-black">
                         ABOUT RLO
                     </h1>
 
-                    <p className="mt-12 max-w-4xl mx-auto text-center text-base sm:text-lg leading-10 text-gray-800 font-bold">
+                    <p className="mt-12 body-font max-w-4xl mx-auto text-center text-base sm:text-lg leading-10 text-gray-800 font-bold">
                         Riverside Lyric Opera is a non-profit organization in Riverside, California, dedicated to celebrating and sharing classical and opera music.
                         We aim to preserve these rich traditions and make them accessible to everyone.
                         Through our performances and educational outreach, we enrich our community's cultural life and inspire a lasting appreciation for the arts.
@@ -27,7 +27,7 @@ export default function AboutRLO() {
 
             {/* Orange band with teams */}
             <div className="bg-brand-orange px-6 sm:px-15 pb-10 sm:pb-14">
-                <div className="p-8 sm:p-12 border-b-10 border-l-10 border-r-10 border-brand-cream">
+                <div className="p-8 sm:p-12 border-b-10 border-l-10 border-r-10 border-brand-white">
                     <div className="mx-auto max-w-screen-xl lg:px-25 lg:py-1">
                         <SectionBlock title="NEW TEAM">
                             <TeamGrid people={newTeam} type="team" />
@@ -58,11 +58,11 @@ function SectionBlock({
         <div className="w-full">
             {/* Title with right-side rule */}
             <div className="flex items-center gap-10">
-                <h2 className="font-accent font-light text-6xl tracking-wider uppercase text-black">
+                <h2 className="headline-font font-light text-6xl tracking-wider uppercase text-black">
                     Our&nbsp;
-                    <span className="text-brand-lilac">{title}</span>
+                    <span className="text-brand-lavender">{title}</span>
                 </h2>
-                <div className="h-1 flex-1 bg-brand-cream rounded-md" />
+                <div className="h-1 flex-1 bg-brand-white rounded-md" />
             </div>
 
             {/* People Grid */}
@@ -106,7 +106,7 @@ function TeamGrid({ people, type }: { people: Person[], type: 'team' | 'board' }
                             />
                         </Link>
                     </div>
-                    <div className="text-sm sm:text-md break-words leading-tight text-black font-subtitle lg:w-1/2">
+                    <div className="text-sm sm:text-md break-words leading-tight text-black body-font lg:w-1/2">
                         <div className="font-bold">
                             {p.name}
                         </div>
