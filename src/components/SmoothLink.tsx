@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { MouseEvent, useEffect, useRef } from "react";
+import { MouseEvent, ReactNode, useEffect, useRef } from "react";
 
 let pendingHash: string | null = null;
 
 type SmoothLinkProps = {
   href: string;
-  label: string;
+  label: ReactNode;
   active?: boolean;
   className?: string;
   onClick?: ((e: MouseEvent<HTMLAnchorElement>) => void) | null;
