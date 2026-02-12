@@ -9,7 +9,7 @@ export default function CalendarIcon(props: React.SVGProps<SVGSVGElement>) {
       viewBox="0 0 1024.5 576"
       height={500}
       widths={500}
-      className="h-[60rem] w-[60rem] absolute top-[-27.5rem] left-[-13rem] pointer-events-none"
+      className="h-[60rem] w-[60rem] hidden sm:block absolute right-[-8rem] bottom-[-21rem]  sm:top-[-27.5rem] sm:left-[-13rem] pointer-events-none"
       preserveAspectRatio="xMidYMid meet"
       version="1.0"
     
