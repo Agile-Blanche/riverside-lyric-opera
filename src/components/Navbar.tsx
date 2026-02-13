@@ -13,6 +13,10 @@ type NavLink = {
   label: ReactNode;
 };
 
+type NavbarProps = {
+  isScrolled: boolean;
+}
+
 const NAV_LINKS: NavLink[] = [
   { href: "/#about", label: "ABOUT US" },
   { href: "/#donate", label: "DONATE" },
@@ -27,20 +31,9 @@ const NAV_LINKS: NavLink[] = [
   },
 ];
 
-export default function Navbar() {
+export default function Navbar({ isScrolled }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   const isActive = (href: string) =>
     pathname === href || (href !== "/" && pathname.startsWith(href + "/"));
