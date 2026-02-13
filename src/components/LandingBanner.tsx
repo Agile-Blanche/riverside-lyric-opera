@@ -31,7 +31,7 @@ export default function LandingBanner() {
         {/* Right Side – Image */}
         <div className="hidden md:block relative lg:w-[60%] w-full min-h-[350px]">
           <Image
-            src="/images/rlo-gala-cropped.jpg"
+            src="images/rlo-gala-cropped.jpg"
             alt="Upcoming performance"
             fill
             priority
