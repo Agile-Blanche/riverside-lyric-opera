@@ -13,7 +13,7 @@ export default function AboutRLO() {
         <section className="w-full scroll-mt-20" id="about">
             <div className="bg-brand-white px-6 sm:px-15 pt-10 sm:pt-14">
                 <div className="p-8 sm:p-12 border-t-10 border-l-10 border-r-10 border-brand-orange">
-                    <h1 className="pt-8 headline-font font-bold text-8xl tracking-wider text-center text-brand-black">
+                    <h1 className="pt-8 headline-font font-bold text-6xl sm:text-8xl tracking-wider text-center text-brand-black">
                         ABOUT RLO
                     </h1>
 
@@ -58,7 +58,7 @@ function SectionBlock({
         <div className="w-full">
             {/* Title with right-side rule */}
             <div className="flex items-center gap-10">
-                <h2 className="headline-font font-light text-6xl tracking-wider uppercase text-black">
+                <h2 className="headline-font font-light text-4xl sm:text-6xl tracking-wider uppercase text-black">
                     Our&nbsp;
                     <span className="text-brand-lavender">{title}</span>
                 </h2>
