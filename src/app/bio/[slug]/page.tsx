@@ -38,7 +38,7 @@ export default function PersonPage({ params }: any) {
                 <section className="mx-auto max-w-[1300px] pt-8 sm:pt-10">
                     {/* Header: person name */}
                     <div className="px-6 sm:px-10 pt-8 sm:pt-12">
-                        <h1 className="font-accent font-bold text-7xl sm:text-9xl leading-[0.95] tracking-wide text-black">
+                        <h1 className="headline-font font-bold text-7xl sm:text-9xl leading-[0.95] tracking-wide text-black">
                             {person.name}
                         </h1>
                     </div>
@@ -73,7 +73,7 @@ export default function PersonPage({ params }: any) {
                             <div className="px-6 sm:px-0">
                                 {/* Title */}
                                 {person.teamRole && (
-                                    <p className="text-4xl tracking-wide text-brand-amber mb-8">
+                                    <p className="body-font text-4xl tracking-wide text-brand-amber mb-8">
                                         {person.teamRole}
                                     </p>
                                 )}
@@ -84,7 +84,7 @@ export default function PersonPage({ params }: any) {
                                 )}
 
                                 {/* Bio paragraphs */}
-                                <article className="prose prose-neutral max-w-none text-sm leading-7 sm:leading-8">
+                                <article className="body-font prose prose-neutral max-w-none text-sm leading-7 sm:leading-8">
                                     {person.bio.map((para, i) => (
                                         <p key={i} className="text-black/80 mb-2">
                                             {para}

@@ -4,15 +4,34 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect, ReactNode } from "react";
 import SmoothLink from "./SmoothLink";
+import CalendarIcon from "./CalendarIcon";
 
-const NAV_LINKS = [
+type NavLink = {
+  href: string;
+  label: ReactNode;
+};
+
+type NavbarProps = {
+  isScrolled: boolean;
+}
+
+const NAV_LINKS: NavLink[] = [
   { href: "/#about", label: "ABOUT US" },
   { href: "/#donate", label: "DONATE" },
+  {
+    href: "/calendar",
+    label: (
+      <span className="flex items-center justify-center w-10 h-5">
+        <p className="sm:hidden uppercase">Calendar</p>
+        <CalendarIcon className="w-full h-full" />
+      </span>
+    ),
+  },
 ];
 
-export default function Navbar() {
+export default function Navbar({ isScrolled }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -20,8 +39,14 @@ export default function Navbar() {
     pathname === href || (href !== "/" && pathname.startsWith(href + "/"));
 
   return (
-    <header className="sticky top-0 z-50 border-b-2 border-brand-amber border-solid">
-      <nav className="bg-brand-white md:h-[9rem] lg:h-[10rem] flex relative">
+    <header className="fixed top-0 left-0 w-full z-50 border-b-2 border-brand-amber bg-brand-white">
+      <nav
+        className={`
+    flex relative w-full items-center
+    transition-[height] duration-300 ease-out
+    ${isScrolled ? "h-[6rem]" : "h-[10rem]"}
+  `}
+      >
         {/* Logo / left side */}
         <Link
           href="/"
@@ -34,13 +59,16 @@ export default function Navbar() {
             width={95}
             height={95}
             priority
-            className="sm:ml-3 md:ml-0 md:w-63 md:h-37 lg:w-70  lg:h-41"
+            className={`
+    transition-transform duration-300 ease-out 
+    ${isScrolled ? "scale-120 translate-x-4" : "scale-250 translate-x-18"}
+  `}
           />
         </Link>
 
         {/* Right side: links + hamburger */}
-        <div className="flex ml-auto space-x-12 items-start">
-          <ul className="hidden sm:flex space-x-12 items-center pt-5 md:pt-10 lg:pt-12 sm:text-sm md:text-base">
+        <div className="flex ml-auto mr-2 space-x-12 items-start">
+          <ul className="hidden sm:flex space-x-12 items-center sm:text-sm md:text-base -translate-y-[.5rem]">
             {NAV_LINKS.map(({ href, label }) => {
               const active = isActive(href);
               return (
@@ -62,7 +90,9 @@ export default function Navbar() {
           </ul>
           <button
             onClick={() => setOpen(!open)}
-            className="text-black pr-9 pt-4 hover:cursor-pointer hover:opacity-90 sm:hidden"
+            className={`text-black pr-9 hover:cursor-pointer hover:opacity-90 sm:hidden
+                      
+              `}
             aria-label="Expand Menu"
             aria-expanded={open}
             aria-controls="dropdown-menu"
@@ -76,23 +106,25 @@ export default function Navbar() {
             id="dropdown-menu"
             className="absolute top-full left-0 w-full bg-brand-orange sm:hidden z-50"
           >
-            <ul className="flex flex-col items-center space-y-10 py-8">
-              {NAV_LINKS.map(({ href, label }) => {
-                const active = isActive(href);
-                return (
-                  <li key={href}>
-                    <SmoothLink
-                      href={href}
-                      label={label}
-                      active={active}
-                      onClick={() => setOpen(false)} // close menu after click
-                      className={
-                        active ? "text-black" : "text-white hover:text-black"
-                      }
-                    />
-                  </li>
-                );
-              })}
+            <ul className="flex flex-col space-y-10 py-8 items-center">
+              {[...NAV_LINKS]
+                .sort((a, b) => (a.href === "/calendar" ? -1 : 0))
+                .map(({ href, label }) => {
+                  const active = isActive(href);
+                  return (
+                    <li key={href}>
+                      <SmoothLink
+                        href={href}
+                        label={label}
+                        active={active}
+                        onClick={() => setOpen(false)} // close menu after click
+                        className={
+                          active ? "text-black" : "text-white hover:text-black"
+                        }
+                      />
+                    </li>
+                  );
+                })}
             </ul>
           </div>
         )}

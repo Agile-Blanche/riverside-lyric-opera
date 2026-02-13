@@ -6,7 +6,7 @@
     --color-brand-orange: #ff6d2c;
     --color-brand-white: #FFFFFF;
     --color-brand-black: #000000;
-    --color-brand-lavender: ##ded6eb;
+    --color-brand-lavender: #ded6eb;
     --color-brand-amber: #a9451f;
 
 }
@@ -56,3 +56,7 @@
     font-style: normal;
     font-display: swap;
 }
+
+/* @media (min-width: 1236px) {
+    .    
+} */
