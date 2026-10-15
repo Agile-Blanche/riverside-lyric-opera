@@ -66,7 +66,7 @@ export default async function PersonPage({
                                 {/* Artwork strip */}
                                 <div className="relative mt-8 h-20 sm:h-35 w-75 sm:w-full overflow-hidden bg-neutral-200">
                                     <Image
-                                        src="/banner.png"
+                                        src="/images/banner.png"
                                         alt="Monet banner"
                                         priority={false}
                                         fill
