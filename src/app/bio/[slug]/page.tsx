@@ -8,7 +8,7 @@ export function generateStaticParams() {
     return getPeople().map(p => ({ slug: p.slug }));
 }
 
-/** In Next 15, params is a Promise — await it */
+/** In Next 15+, params is a Promise — await it */
 export async function generateMetadata({
     params,
 }: {
@@ -27,8 +27,13 @@ export async function generateMetadata({
     };
 }
 
-export default function PersonPage({ params }: any) {
-    const person = getPersonBySlug(params.slug);
+export default async function PersonPage({
+    params,
+}: {
+    params: Promise<{ slug: string }>;
+}) {
+    const { slug } = await params;
+    const person = getPersonBySlug(slug);
     if (!person) return notFound();
 
     return (
