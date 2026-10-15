@@ -59,6 +59,7 @@ export default async function PersonPage({
                                         src={person.src}
                                         alt={person.name}
                                         fill
+                                        sizes="(min-width: 1300px) 640px, (min-width: 640px) 50vw, 300px"
                                         className="object-cover"
                                         priority
                                     />
