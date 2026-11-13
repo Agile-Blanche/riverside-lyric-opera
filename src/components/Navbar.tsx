@@ -13,10 +13,6 @@ type NavLink = {
   label: ReactNode;
 };
 
-type NavbarProps = {
-  isScrolled: boolean;
-}
-
 const NAV_LINKS: NavLink[] = [
   { href: "/#about", label: "ABOUT US" },
   { href: "/#donate", label: "DONATE" },
@@ -31,7 +27,7 @@ const NAV_LINKS: NavLink[] = [
   },
 ];
 
-export default function Navbar({ isScrolled }: NavbarProps) {
+export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -43,26 +39,22 @@ export default function Navbar({ isScrolled }: NavbarProps) {
       <nav
         className={`
     flex relative w-full items-center
-    transition-[height] duration-300 ease-out
-    ${isScrolled ? "h-[6rem]" : "h-[10rem]"}
+    h-[7rem]
+  
   `}
       >
         {/* Logo / left side */}
         <Link
           href="/"
-          className="inline-block hover:cursor-pointer hover:opacity-90"
+          className="lg:px-10 inline-block transition duration-400 hover:cursor-pointer hover:opacity-80"
           aria-label="Go to homepage"
         >
           <Image
             src="/logo.svg"
             alt="Riverside Lyric Opera Logo"
-            width={95}
-            height={95}
+            width={150}
+            height={150}
             priority
-            className={`
-    transition-transform duration-300 ease-out 
-    ${isScrolled ? "scale-120 translate-x-4" : "scale-250 translate-x-18"}
-  `}
           />
         </Link>
 
@@ -81,7 +73,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
                       "headline-font font-bold",
                       active
                         ? "text-brand-orange"
-                        : "text-black hover:text-brand-orange",
+                        : "text-black transition duration-400 hover:text-brand-orange",
                     ].join(" ")}
                   />
                 </li>
