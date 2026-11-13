@@ -11,7 +11,7 @@ export default function AboutRLO() {
 
     return (
         <section className="w-full scroll-mt-20" id="about">
-            <div className="bg-brand-white px-6 sm:px-15 pt-10 sm:pt-14">
+            <div className="bg-brand-white px-6 sm:px-15 pt-10 sm:pt-40">
                 <div className="p-8 sm:p-12 border-t-10 border-l-10 border-r-10 border-brand-orange">
                     <h1 className="pt-8 headline-font font-bold text-6xl sm:text-8xl tracking-wider text-center text-brand-black">
                         ABOUT RLO
