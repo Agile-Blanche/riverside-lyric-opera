@@ -20,7 +20,7 @@ const NAV_LINKS: NavLink[] = [
     href: "/calendar",
     label: (
       <span className="flex items-center justify-center w-10 h-5">
-        <p className="sm:hidden uppercase">Calendar</p>
+        <p className="md:hidden uppercase">Calendar</p>
         <CalendarIcon className="w-full h-full" />
       </span>
     ),
@@ -30,6 +30,15 @@ const NAV_LINKS: NavLink[] = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+ 
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add('max-md:overflow-hidden')
+    }
+     return () => {
+      document.body.classList.remove('max-md:overflow-hidden');
+    };
+  }, [open]);
 
   const isActive = (href: string) =>
     pathname === href || (href !== "/" && pathname.startsWith(href + "/"));
@@ -46,7 +55,7 @@ export default function Navbar() {
         {/* Logo / left side */}
         <Link
           href="/"
-          className="lg:px-10 inline-block transition duration-400 hover:cursor-pointer hover:opacity-80"
+          className="px-2 md:px-10 inline-block transition duration-400 hover:cursor-pointer hover:opacity-80"
           aria-label="Go to homepage"
         >
           <Image
@@ -60,7 +69,7 @@ export default function Navbar() {
 
         {/* Right side: links + hamburger */}
         <div className="flex ml-auto mr-2 space-x-12 items-start">
-          <ul className="hidden sm:flex space-x-12 items-center sm:text-sm md:text-base -translate-y-[.5rem]">
+          <ul className="hidden md:flex space-x-12 items-center text-base -translate-y-[.5rem]">
             {NAV_LINKS.map(({ href, label }) => {
               const active = isActive(href);
               return (
@@ -82,7 +91,7 @@ export default function Navbar() {
           </ul>
           <button
             onClick={() => setOpen(!open)}
-            className={`text-black pr-9 hover:cursor-pointer hover:opacity-90 sm:hidden
+            className={`text-black pr-9 hover:cursor-pointer hover:opacity-90 md:hidden -translate-y-[.5rem]
                       
               `}
             aria-label="Expand Menu"
@@ -96,7 +105,7 @@ export default function Navbar() {
         {open && (
           <div
             id="dropdown-menu"
-            className="absolute top-full left-0 w-full bg-brand-orange sm:hidden z-50"
+            className="absolute top-full h-[100vh] left-0 w-full bg-brand-orange md:hidden z-50"
           >
             <ul className="flex flex-col space-y-10 py-8 items-center">
               {[...NAV_LINKS]
