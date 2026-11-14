@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect, ReactNode } from "react";
 import SmoothLink from "./SmoothLink";
 import CalendarIcon from "./CalendarIcon";
+import { SOCIALS } from "@/data/socials";
 
 type NavLink = {
   href: string;
@@ -19,7 +20,7 @@ const NAV_LINKS: NavLink[] = [
   {
     href: "/calendar",
     label: (
-      <span className="flex items-center justify-center w-10 h-5">
+      <span className="flex items-center md:justify-center w-15 h-5">
         <p className="md:hidden uppercase">Calendar</p>
         <CalendarIcon className="w-full h-full" />
       </span>
@@ -30,13 +31,13 @@ const NAV_LINKS: NavLink[] = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
- 
+
   useEffect(() => {
     if (open) {
-      document.body.classList.add('max-md:overflow-hidden')
+      document.body.classList.add("max-md:overflow-hidden");
     }
-     return () => {
-      document.body.classList.remove('max-md:overflow-hidden');
+    return () => {
+      document.body.classList.remove("max-md:overflow-hidden");
     };
   }, [open]);
 
@@ -105,28 +106,53 @@ export default function Navbar() {
         {open && (
           <div
             id="dropdown-menu"
-            className="absolute top-full h-[100vh] left-0 w-full bg-brand-orange md:hidden z-50"
+            className="absolute top-full h-[calc(100dvh-7rem)] overflow-y-auto left-0 w-full bg-brand-orange md:hidden z-50 p-7.5"
           >
-            <ul className="flex flex-col space-y-10 py-8 items-center">
-              {[...NAV_LINKS]
-                .sort((a, b) => (a.href === "/calendar" ? -1 : 0))
-                .map(({ href, label }) => {
-                  const active = isActive(href);
-                  return (
-                    <li key={href}>
-                      <SmoothLink
-                        href={href}
-                        label={label}
-                        active={active}
-                        onClick={() => setOpen(false)} // close menu after click
-                        className={
-                          active ? "text-black" : "text-white hover:text-black"
-                        }
+            <div className="flex flex-col border-2 border-brand-amber h-full gap-y-20 min-h-100">
+              <ul className="space-y-12 py-10 pl-10 text-3xl headline-font">
+                {[...NAV_LINKS]
+                  .sort((a, b) => (a.href === "/calendar" ? -1 : 0))
+                  .map(({ href, label }) => {
+                    const active = isActive(href);
+                    return (
+                      <li key={href}>
+                        <SmoothLink
+                          href={href}
+                          label={label}
+                          active={active}
+                          onClick={() => setOpen(false)} // close menu after click
+                          className={
+                            active
+                              ? "text-black"
+                              : "text-brand-white hover:text-black"
+                          }
+                        />
+                      </li>
+                    );
+                  })}
+              </ul>
+              <div className="flex gap-8 ps-10 mt-auto -translate-y-10">
+                {SOCIALS.map((s) => (
+                  <Link
+                    key={s.name}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={s.name}
+                  >
+                    <div className="flex items-center justify-center bg-brand-orange">
+                      <Image
+                        src={s.icon}
+                        alt={s.name}
+                        width={20}
+                        height={20}
+                        className="h-7.5 w-7.5"
                       />
-                    </li>
-                  );
-                })}
-            </ul>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         )}
       </nav>
