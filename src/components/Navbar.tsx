@@ -108,12 +108,13 @@ export default function Navbar() {
             id="dropdown-menu"
             className="absolute top-full h-[calc(100dvh-7rem)] overflow-y-auto left-0 w-full bg-brand-orange md:hidden z-50 p-7.5"
           >
-            <div className="flex flex-col border-2 border-brand-amber h-full gap-y-20 min-h-100">
+            <div className="flex flex-col border-3 border-brand-amber gap-y-20 min-h-full">
               <ul className="space-y-12 py-10 pl-10 text-3xl headline-font">
                 {[...NAV_LINKS]
                   .sort((a, b) => (a.href === "/calendar" ? -1 : 0))
                   .map(({ href, label }) => {
                     const active = isActive(href);
+
                     return (
                       <li key={href}>
                         <SmoothLink
@@ -124,14 +125,15 @@ export default function Navbar() {
                           className={
                             active
                               ? "text-black"
-                              : "text-brand-white hover:text-black"
+                              : "text-brand-white hover:text-brand-amber"
                           }
                         />
+                        {href === "/#donate" && <p className="text-base pl-2 pt-2 body-font text-brand-black/70">One-time or monthly</p>}
                       </li>
                     );
                   })}
               </ul>
-              <div className="flex gap-8 ps-10 mt-auto -translate-y-10">
+              <div className="flex gap-8 ps-10 mt-auto pb-10">
                 {SOCIALS.map((s) => (
                   <Link
                     key={s.name}
