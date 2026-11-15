@@ -6,8 +6,8 @@ import { LucideHeart } from "lucide-react";
 export default function LandingBanner() {
   return (
     <section className="w-full">
-      <div className="flex w-full max-md:min-h-[calc(100dvh-7rem)] min-h-[720px]">
-        <div className="relative w-full">
+      <div className="flex w-full max-sm:min-h-[calc(100dvh-7rem)] min-h-[720px]">
+        <div className="flex flex-col justify-end relative w-full">
           <Image
             src="/images/RLO-gala-cropped.jpg"
             alt="Upcoming performance"
@@ -16,7 +16,7 @@ export default function LandingBanner() {
             className="object-cover brightness-90"
           />
           <div className="absolute inset-0 bg-linear-to-tr from-black/90 via-black/35 to-transparent"></div>
-          <div className="px-8 md:px-15 absolute bottom-15 md:bottom-30 xl:bottom-20 headline-font tracking-tight">
+          <div className="relative pt-10 px-8 md:px-15 pb-15 md:pb-30 xl:pb-20 headline-font tracking-tight">
             <p className="font-bold uppercase text-brand-orange text-xl xl:text-3xl">support rlo</p>
             <div className="max-w-[9rem] border-b-7 xl:max-w-[13rem] xl:border-b-10 my-3 xl:my-5 border-brand-amber"></div>
             <h1 className="text-3xl min-[80rem]:text-5xl min-[106.25rem]:text-6xl max-w-6xl font-bold uppercase text-brand-white">
