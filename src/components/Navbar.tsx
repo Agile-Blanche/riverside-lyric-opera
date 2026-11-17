@@ -109,7 +109,7 @@ export default function Navbar() {
             className="absolute top-full h-[calc(100dvh-7rem)] overflow-y-auto left-0 w-full bg-brand-orange md:hidden z-50 p-7.5"
           >
             <div className="flex flex-col border-3 border-brand-amber gap-y-20 min-h-full">
-              <ul className="space-y-12 py-10 pl-10 text-3xl headline-font">
+              <ul className="space-y-12 py-10 ps-8 sm:pl-10 text-3xl headline-font">
                 {[...NAV_LINKS]
                   .sort((a, b) => (a.href === "/calendar" ? -1 : 0))
                   .map(({ href, label }) => {
@@ -128,12 +128,12 @@ export default function Navbar() {
                               : "text-brand-white hover:text-brand-amber"
                           }
                         />
-                        {href === "/#donate" && <p className="text-base pl-2 pt-2 body-font text-brand-black/70">One-time or monthly</p>}
+                        {href === "/#donate" && <p className="text-base pl-2 pt-0.5 sm:pt-2 body-font text-brand-black/70">One-time or monthly</p>}
                       </li>
                     );
                   })}
               </ul>
-              <div className="flex gap-8 ps-10 mt-auto pb-10">
+              <div className="flex gap-6 sm:gap-8 ps-8 sm:ps-10 mt-auto pb-10">
                 {SOCIALS.map((s) => (
                   <Link
                     key={s.name}
@@ -148,7 +148,7 @@ export default function Navbar() {
                         alt={s.name}
                         width={20}
                         height={20}
-                        className="h-7.5 w-7.5"
+                        className="h-6 w-6 sm:h-7.5 sm:w-7.5"
                       />
                     </div>
                   </Link>

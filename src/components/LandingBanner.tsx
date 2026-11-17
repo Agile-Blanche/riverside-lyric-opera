@@ -13,16 +13,16 @@ export default function LandingBanner() {
             alt="Upcoming performance"
             fill
             priority
-            className="object-cover brightness-90"
+            className="object-cover 2xl:object-[center_30%] brightness-90"
           />
           <div className="absolute inset-0 bg-linear-to-tr from-black/90 via-black/35 to-transparent"></div>
           <div className="relative pt-10 px-8 md:px-15 pb-15 md:pb-30 xl:pb-20 headline-font tracking-tight">
             <p className="font-bold uppercase text-brand-orange text-xl xl:text-3xl">support rlo</p>
-            <div className="max-w-[9rem] border-b-7 xl:max-w-[13rem] xl:border-b-10 my-3 xl:my-5 border-brand-amber"></div>
+            <div className="max-w-[9rem] border-b-7 xl:max-w-[13rem] xl:border-b-10 my-3 xl:my-5 border-brand-amber"/>
             <h1 className="text-3xl min-[80rem]:text-5xl min-[106.25rem]:text-6xl max-w-6xl font-bold uppercase text-brand-white">
               Be part of every season.
             </h1>
-            <p className="pl-10 pb-2 xl:pt-5 xl:pb-8 text-lg xl:text-3xl body-font text-brand-white max-w-md xl:max-w-2xl leading-10 xl:leading-13">
+            <p className="pl-10 pb-4 pt-2 sm:pt-0 sm:pb-2 xl:pt-5 xl:pb-8 text-lg xl:text-3xl body-font text-brand-white max-w-md xl:max-w-2xl leading-8 sm:leading-10 xl:leading-13">
               A monthly gift keeps live opera on stage in Riverside, all year
               long.
             </p>
