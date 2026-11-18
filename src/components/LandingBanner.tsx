@@ -22,7 +22,7 @@ export default function LandingBanner() {
             <h1 className="text-3xl min-[80rem]:text-5xl min-[106.25rem]:text-6xl max-w-6xl font-bold uppercase text-brand-white">
               Be part of every season.
             </h1>
-            <p className="pl-10 pb-4 pt-2 sm:pt-0 sm:pb-2 xl:pt-5 xl:pb-8 text-lg xl:text-3xl body-font text-brand-white max-w-md xl:max-w-2xl leading-8 sm:leading-10 xl:leading-13">
+            <p className="pl-5 md:pl-10 pb-4 pt-2 sm:pt-0 sm:pb-2 xl:pt-5 xl:pb-8 text-lg xl:text-3xl body-font text-brand-white max-w-md xl:max-w-2xl leading-8 sm:leading-10 xl:leading-13">
               A monthly gift keeps live opera on stage in Riverside, all year
               long.
             </p>

@@ -49,39 +49,51 @@ export default function AboutRLO() {
 
   return (
     <section className="w-full scroll-mt-20" id="about">
-      <div className="bg-brand-white px-6 sm:px-15 pt-10 sm:pt-40">
-        <div className="p-8 sm:px-24 border-t-10 border-l-10 border-r-10 border-brand-orange">
-          <p className="pt-12 headline-font font-bold uppercase text-brand-amber text-xl xl:text-3xl">
+      <div className="bg-brand-white px-6 sm:px-15 pt-10 sm:pt-20 lg:pt-40">
+        <div className="p-8 md:px-12 lg:px-24 border-t-10 border-l-10 border-r-10 border-brand-orange">
+          <p className="md:pt-12 headline-font font-bold uppercase text-brand-amber text-xl xl:text-3xl">
             ABOUT RLO
           </p>
-          <div className="max-w-[9rem] border-b-7 xl:max-w-[11.5rem] xl:border-b-10 mb-2 xl:mt-5 border-brand-orange" />
-          <h2 className="text-5xl max-w-2xl leading-16 font-bold uppercase headline-font">
-            Change hearts. Change the world.
+          <div className="max-w-[7.5rem] md:max-w-[9rem] border-b-7 xl:max-w-[11.5rem] xl:border-b-10 my-2 md:my-3 xl:mt-5 border-brand-orange" />
+          <h2 className="text-[22px] lg:text-[1.8rem] xl:text-5xl max-w-xs lg:max-w-sm  xl:max-w-2xl  xl:leading-16 font-bold uppercase headline-font">
+            Change hearts. <br /> Change the world.
           </h2>
-          <p className="mt-3 pl-10 body-font max-w-2xl text-base sm:text-xl leading-relaxed text-gray-700 font-semibold">
-            Riverside Lyric Opera is a non-profit organization in Riverside,
+          <p className="mt-3  pb-5 md:pb-0 pl-5 md:pl-10 body-font max-w-md md:max-w-2xl text-base sm:text-xl leading-relaxed text-gray-700 font-semibold">
+            Riverside Lyric Opera is a nonprofit organization in Riverside,
             California, dedicated to celebrating and sharing classical and opera
             music. We aim to preserve these rich traditions and make
             them accessible to everyone.
-            {/* Through our performances and educational outreach, we enrich our community's cultural life and inspire a lasting appreciation for the arts. */}
           </p>
 
-          <ul className="pl-10 pt-6 pb-12 grid grid-cols-1 md:grid-cols-3 max-w-7xl gap-15">
+          <ul className="pl-5 md:pl-10 pt-4 md:pt-6 pb-12 grid grid-cols-1 lg:grid-cols-3 max-w-7xl gap-10 lg:gap-17">
             {PILLARS.map(({ icon: Icon, headline, blurb, href }) => {
               return (
                 <li key={headline}>
                   <Icon
-                    size={40}
+                    // size={40}
                     aria-hidden="true"
-                    className="text-brand-amber"
+                    className="text-brand-amber size-7 lg:size-10"
                   />
-                  <h3 className="text-3xl font-bold uppercase headline-font py-3">
+                  <h3 className="text-xl lg:text-[1.8rem] font-bold uppercase headline-font py-3">
                     {headline}
                   </h3>
-                  <p className="text-lg text-gray-800 body-font">{blurb}</p>
+                  <p className="max-w-xs md:max-w-md text-base md:text-lg text-gray-800 body-font">
+                    {blurb}
+                  </p>
                   {href && (
-                    <Link href={href} className="inline-flex pt-3 text-base text-brand-amber group ml-0.5 font-semibold items-center">
-                      See upcoming performances <ArrowRight size={18} className="ml-1 transition duration-400 group-hover:translate-x-1" />
+                    <Link
+                      href={href}
+                      className="pt-3 text-sm md:text-base text-brand-amber group ml-0.5 font-semibold lg:whitespace-nowrap inline-block"
+                    >
+                      See upcoming
+                      {" "}
+                      <span className="whitespace-nowrap">
+                        performances{" "}
+                        <ArrowRight
+                          size={18}
+                          className="transition duration-400 group-hover:translate-x-1 inline-block"
+                        />
+                      </span>
                     </Link>
                   )}
                 </li>
