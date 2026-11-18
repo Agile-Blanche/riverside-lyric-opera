@@ -168,9 +168,8 @@ function TeamGrid({
     ? `relative aspect-[2/3] overflow-hidden ring-1 ring-black/10 ${hoverShadow}`
     : `relative aspect-square overflow-hidden ring-1 ring-black/10 ${hoverShadow}`;
 
-  const imgSizes = isTeamGrid
-    ? "(max-width:768px) 35vw, (max-width:1024px) 30vw, 150px"
-    : "(max-width:768px) 45vw, (max-width:1024px) 30vw, 200px";
+  const imgSize =
+    "(max-width:640px) 75vw, (max-width:768px) 50vw, 30vw"
 
   return (
     <ul className={gridClasses}>
@@ -186,7 +185,7 @@ function TeamGrid({
                 alt={p.name}
                 fill
                 className="object-cover grayscale object-top scale-105"
-                sizes={imgSizes}
+                sizes={imgSize}
                 priority={false}
               />
             </Link>
