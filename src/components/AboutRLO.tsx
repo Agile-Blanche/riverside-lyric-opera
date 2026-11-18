@@ -39,7 +39,7 @@ const PILLARS: Pillar[] = [
 ];
 
 export default function AboutRLO() {
-  const newTeam = PEOPLE.filter((p) => p?.teamRole?.length).sort(
+  const team = PEOPLE.filter((p) => p?.teamRole?.length).sort(
     (a, b) => (a.teamIndex ?? 0) - (b.teamIndex ?? 0),
   );
 
@@ -107,8 +107,8 @@ export default function AboutRLO() {
       <div className="bg-brand-orange px-6 sm:px-15 pb-10 sm:pb-14">
         <div className="p-8 sm:p-12 border-b-10 border-l-10 border-r-10 border-brand-white">
           <div className="mx-auto max-w-screen-xl lg:px-25 lg:py-1">
-            <SectionBlock title="NEW TEAM">
-              <TeamGrid people={newTeam} type="team" />
+            <SectionBlock title="TEAM">
+              <TeamGrid people={team} type="team" />
             </SectionBlock>
 
             <div className="mt-10 sm:mt-14">
