@@ -70,7 +70,6 @@ export default function AboutRLO() {
               return (
                 <li key={headline}>
                   <Icon
-                    // size={40}
                     aria-hidden="true"
                     className="text-brand-amber size-7 lg:size-10"
                   />
@@ -85,8 +84,7 @@ export default function AboutRLO() {
                       href={href}
                       className="pt-3 text-sm md:text-base text-brand-amber group ml-0.5 font-semibold lg:whitespace-nowrap inline-block"
                     >
-                      See upcoming
-                      {" "}
+                      See upcoming{" "}
                       <span className="whitespace-nowrap">
                         performances{" "}
                         <ArrowRight
@@ -106,7 +104,7 @@ export default function AboutRLO() {
       {/* Orange band with teams */}
       <div className="bg-brand-orange px-6 sm:px-15 pb-10 sm:pb-14">
         <div className="p-8 sm:p-12 border-b-10 border-l-10 border-r-10 border-brand-white">
-          <div className="mx-auto max-w-screen-xl lg:px-25 lg:py-1">
+          <div className="max-w-screen-2xl lg:px-13 xl:pr-0 xl:pl-13 lg:py-10">
             <SectionBlock title="TEAM">
               <TeamGrid people={team} type="team" />
             </SectionBlock>
@@ -136,10 +134,10 @@ function SectionBlock({
     <div className="w-full">
       {/* Title with right-side rule */}
       <div className="flex items-center gap-10">
-        <h2 className="headline-font font-light text-4xl sm:text-6xl tracking-wider uppercase text-black">
+        <h3 className="headline-font font-bold text-[45px] uppercase text-black">
           Our&nbsp;
           <span className="text-brand-lavender">{title}</span>
-        </h2>
+        </h3>
         <div className="h-1 flex-1 bg-brand-white rounded-md" />
       </div>
 
@@ -157,29 +155,28 @@ function TeamGrid({
   type: "team" | "board";
 }) {
   const hoverShadow =
-    "shadow-lg transition duration-300 ease-out group-hover:shadow-xl group-hover:-translate-y-2";
-  const isTeamGrid = type === "team" ? true : false;
+    "shadow-lg transition duration-300 ease-out group-hover:shadow-2xl";
+  const isTeamGrid = type === "team";
 
   const gridClasses = isTeamGrid
-    ? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 sm:gap-7"
+    ? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5 sm:gap-7"
     : "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 sm:gap-6";
 
   const imgContainer = isTeamGrid
     ? `relative aspect-[2/3] overflow-hidden ring-1 ring-black/10 ${hoverShadow}`
     : `relative aspect-square overflow-hidden ring-1 ring-black/10 ${hoverShadow}`;
 
-  const imgSize =
-    "(max-width:640px) 75vw, (max-width:768px) 50vw, 30vw"
+  const imgSize = "(max-width:640px) 75vw, (max-width:768px) 50vw, 30vw";
 
   return (
     <ul className={gridClasses}>
       {people.map((p) => (
         <li
           key={p.name}
-          className="space-y-2 transition-transform duration-500 ease-out hover:scale-110 hover:brightness-125"
+          className="group space-y-2 transition duration-300 ease-out hover:scale-105 hover:brightness-125"
         >
           <div className={imgContainer}>
-            <Link href={`bio/${p.slug}`}>
+            <Link href={`/bio/${p.slug}`}>
               <Image
                 src={p.src}
                 alt={p.name}
@@ -190,8 +187,11 @@ function TeamGrid({
               />
             </Link>
           </div>
-          <div className="text-sm sm:text-md break-words leading-tight text-black body-font lg:w-1/2">
-            <div className="font-bold">{p.name}</div>
+          <div className="text-sm break-words leading-tight text-black body-font">
+            <div className={isTeamGrid ? "w-min font-bold" : "font-bold"}>
+              {p.name}
+            </div>
+
             <div className="border-t border-black my-2 sm:my-3 w-5"></div>
             {p.teamRole && isTeamGrid && (
               <div className="text-xs sm:text-sm italic">{p.teamRole}</div>
