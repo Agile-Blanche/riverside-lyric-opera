@@ -6,7 +6,7 @@ import { LucideHeart } from "lucide-react";
 export default function LandingBanner() {
   return (
     <section className="w-full">
-      <div className="flex w-full max-sm:min-h-[calc(100dvh-7rem)] min-h-[720px]">
+      <div className="flex w-full max-sm:min-h-[calc(100dvh-20rem)] min-h-[720px]">
         <div className="flex flex-col justify-end relative w-full">
           <Image
             src="/images/RLO-gala-cropped.jpg"
