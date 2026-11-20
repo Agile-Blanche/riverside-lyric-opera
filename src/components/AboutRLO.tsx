@@ -55,7 +55,7 @@ export default function AboutRLO() {
             ABOUT RLO
           </p>
           <div className="max-w-[7.5rem] md:max-w-[9rem] border-b-7 xl:max-w-[11.5rem] xl:border-b-10 my-2 md:my-3 xl:mt-5 border-brand-orange" />
-          <h2 className="text-[22px] lg:text-[1.8rem] xl:text-5xl max-w-xs lg:max-w-sm  xl:max-w-2xl  xl:leading-16 font-bold uppercase headline-font">
+          <h2 className="text-[22px] md:text-[2rem] xl:text-5xl max-w-xs md:max-w-sm  xl:max-w-2xl  xl:leading-16 font-bold uppercase headline-font">
             Change hearts. <br /> Change the world.
           </h2>
           <p className="mt-3  pb-5 md:pb-0 pl-5 md:pl-10 body-font max-w-md md:max-w-2xl text-base sm:text-xl leading-relaxed text-gray-700 font-semibold">
@@ -73,7 +73,7 @@ export default function AboutRLO() {
                     aria-hidden="true"
                     className="text-brand-amber size-7 lg:size-10"
                   />
-                  <h3 className="text-xl lg:text-[1.8rem] font-bold uppercase headline-font py-3">
+                  <h3 className="text-lg md:text-xl lg:text-[1.4rem] xl:text-[1.8rem] font-bold uppercase headline-font py-3">
                     {headline}
                   </h3>
                   <p className="max-w-xs md:max-w-md text-base md:text-lg text-gray-800 body-font">
@@ -103,8 +103,8 @@ export default function AboutRLO() {
 
       {/* Orange band with teams */}
       <div className="bg-brand-orange px-6 sm:px-15 pb-10 sm:pb-14">
-        <div className="p-8 sm:p-12 border-b-10 border-l-10 border-r-10 border-brand-white">
-          <div className="max-w-screen-2xl lg:px-13 xl:pr-0 xl:pl-13 lg:py-10">
+        <div className="p-4 sm:p-8 border-b-10 border-l-10 border-r-10 border-brand-white">
+          <div className="max-w-screen-2xl lg:px-13 xl:pr-0 xl:pl-13 py-5 lg:py-10">
             <SectionBlock title="TEAM">
               <TeamGrid people={team} type="team" />
             </SectionBlock>
@@ -133,8 +133,8 @@ function SectionBlock({
   return (
     <div className="w-full">
       {/* Title with right-side rule */}
-      <div className="flex items-center gap-10">
-        <h3 className="headline-font font-bold text-[45px] uppercase text-black">
+      <div className="flex items-center gap-5 lg:gap-10">
+        <h3 className="headline-font font-bold text-xl md:text-2xl lg:text-[28px] xl:text-[45px] uppercase text-black">
           Our&nbsp;
           <span className="text-brand-lavender">{title}</span>
         </h3>
@@ -159,14 +159,14 @@ function TeamGrid({
   const isTeamGrid = type === "team";
 
   const gridClasses = isTeamGrid
-    ? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5 sm:gap-7"
-    : "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 sm:gap-6";
+    ? "grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-5 sm:gap-7"
+    : "grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-5 sm:gap-6";
 
   const imgContainer = isTeamGrid
     ? `relative aspect-[2/3] overflow-hidden ring-1 ring-black/10 ${hoverShadow}`
     : `relative aspect-square overflow-hidden ring-1 ring-black/10 ${hoverShadow}`;
 
-  const imgSize = "(max-width:640px) 75vw, (max-width:768px) 50vw, 30vw";
+  const imgSize = "(max-width:640px) 75vw, (max-width:1280px) 50vw, 30vw";
 
   return (
     <ul className={gridClasses}>
@@ -188,7 +188,7 @@ function TeamGrid({
             </Link>
           </div>
           <div className="text-sm break-words leading-tight text-black body-font">
-            <div className={isTeamGrid ? "w-min font-bold" : "font-bold"}>
+            <div className={`font-bold ${isTeamGrid ? "w-min" : ""}`}>
               {p.name}
             </div>
 
