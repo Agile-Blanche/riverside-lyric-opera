@@ -133,7 +133,7 @@ export default function Navbar() {
                     );
                   })}
               </ul>
-              <div className="flex gap-6 sm:gap-8 ps-8 sm:ps-10 mt-auto pb-10">
+              <div className="flex gap-4 min-[340px]:gap-6 sm:gap-8 ps-7 sm:ps-10 mt-auto pb-10">
                 {SOCIALS.map((s) => (
                   <Link
                     key={s.name}
