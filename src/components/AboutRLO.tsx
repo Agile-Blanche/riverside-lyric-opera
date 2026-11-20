@@ -109,7 +109,7 @@ export default function AboutRLO() {
               <TeamGrid people={team} type="team" />
             </SectionBlock>
 
-            <div className="mt-10 sm:mt-14">
+            <div className="mt-15">
               <SectionBlock title="BOARD">
                 <TeamGrid people={board} type="board" />
               </SectionBlock>
