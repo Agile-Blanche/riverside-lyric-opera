@@ -50,7 +50,7 @@ export default function AboutRLO() {
   return (
     <section className="w-full scroll-mt-20" id="about">
       <div className="bg-brand-white px-6 sm:px-15 pt-10 sm:pt-20 lg:pt-40">
-        <div className="p-8 md:px-12 lg:px-24 border-t-10 border-l-10 border-r-10 border-brand-orange">
+        <div className="p-4 md:px-12 lg:px-24 border-t-10 border-l-10 border-r-10 border-brand-orange">
           <p className="md:pt-12 headline-font font-bold uppercase text-brand-amber text-xl xl:text-3xl">
             ABOUT RLO
           </p>
@@ -104,7 +104,7 @@ export default function AboutRLO() {
       {/* Orange band with teams */}
       <div className="bg-brand-orange px-6 sm:px-15 pb-10 sm:pb-14">
         <div className="p-4 sm:p-8 border-b-10 border-l-10 border-r-10 border-brand-white">
-          <div className="max-w-screen-2xl lg:px-13 xl:pr-0 xl:pl-13 py-5 lg:py-10">
+          <div className="max-w-screen-2xl lg:px-13 xl:pr-0 xl:pl-13 py-10">
             <SectionBlock title="TEAM">
               <TeamGrid people={team} type="team" />
             </SectionBlock>
