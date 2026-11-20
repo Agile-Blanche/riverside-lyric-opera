@@ -39,12 +39,12 @@ const PILLARS: Pillar[] = [
 ];
 
 export default function AboutRLO() {
-  const team = PEOPLE.filter((p) => p?.teamRole?.length).sort(
-    (a, b) => (a.teamIndex ?? 0) - (b.teamIndex ?? 0),
+  const team = PEOPLE.filter((p) => p.teamRole).sort(
+    (a, b) => (a.teamIndex ?? Infinity) - (b.teamIndex ?? Infinity),
   );
 
-  const board = PEOPLE.filter((p) => p?.boardRole?.length).sort(
-    (a, b) => (a?.boardIndex ?? 0) - (b?.boardIndex ?? 0),
+  const board = PEOPLE.filter((p) => p.boardRole).sort(
+    (a, b) => (a.boardIndex ?? Infinity) - (b.boardIndex ?? Infinity),
   );
 
   return (
