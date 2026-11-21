@@ -17,8 +17,10 @@ export default function LandingBanner() {
           />
           <div className="absolute inset-0 bg-linear-to-tr from-black/90 via-black/35 to-transparent"></div>
           <div className="relative pt-10 px-7 md:px-15 pb-15 md:pb-30 xl:pb-20 headline-font tracking-tight">
-            <p className="font-bold uppercase text-brand-orange text-xl xl:text-3xl">support rlo</p>
-            <div className="max-w-[9rem] border-b-7 xl:max-w-[13rem] xl:border-b-10 my-3 xl:my-5 border-brand-amber"/>
+            <p className="font-bold uppercase text-brand-orange text-xl xl:text-3xl">
+              support rlo
+            </p>
+            <div className="max-w-[9rem] border-b-7 xl:max-w-[13rem] xl:border-b-10 my-3 xl:my-5 border-brand-amber" />
             <h1 className="text-3xl min-[80rem]:text-5xl min-[106.25rem]:text-6xl max-w-6xl font-bold uppercase text-brand-white">
               Be part of every season.
             </h1>
@@ -26,22 +28,31 @@ export default function LandingBanner() {
               A monthly gift keeps live opera on stage in Riverside, all year
               long.
             </p>
-
-            <Link
-              href={PAYPAL_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group gap-x-2 inline-flex py-2.5 px-4 rounded-4xl ml-10 bg-brand-lavender xl:text-2xl font-bold uppercase headline-font transition-all
+            <div className="ml-5 sm:ml-10">
+              <Link
+                href={PAYPAL_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group gap-x-2 inline-flex py-2.5 px-4 rounded-4xl bg-brand-lavender xl:text-2xl font-bold uppercase headline-font transition-all
                         duration-500 ease-out hover:scale-110 hover:bg-brand-orange text-brand-black"
-            >
-              Give Monthly
-              <LucideHeart
-                className="mt-0.5 fill-transparent transition
-                        duration-500 ease-out group-hover:fill-black"
                 aria-describedby="donate-hint"
-              />
-            </Link>
-            <p id="donate-hint" className="pt-3 max-w-sm ml-12 text-balance leading-4.5"><small className="text-brand-lavender/70 xl:text-base body-font">Select “Monthly” on the PayPal page. One-time gifts are welcome too.</small></p>
+              >
+                Give Monthly
+                <LucideHeart
+                  className="fill-transparent transition
+                        duration-500 ease-out group-hover:fill-black -mt-0.5 lg:mt-0.5"
+                />
+              </Link>
+              <p
+                id="donate-hint"
+                className="pt-3 ml-2 max-w-sm text-balance leading-4.5"
+              >
+                <small className="text-brand-lavender/70 xl:text-base body-font">
+                  Select “Monthly” on the PayPal page. One-time gifts are
+                  welcome too.
+                </small>
+              </p>
+            </div>
           </div>
         </div>
       </div>
