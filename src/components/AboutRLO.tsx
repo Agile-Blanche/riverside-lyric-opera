@@ -4,8 +4,8 @@ import Link from "next/link";
 import {
   LucideIcon,
   LucideMicVocal,
-  BookOpen,
-  HeartHandshake,
+  LucideBookOpen,
+  LucideHeartHandshake,
   ArrowRight,
 } from "lucide-react";
 
@@ -25,13 +25,13 @@ const PILLARS: Pillar[] = [
     href: "/calendar",
   },
   {
-    icon: BookOpen,
+    icon: LucideBookOpen,
     headline: "educate",
     blurb:
       "Lectures, student outreach, and resources that open the door to opera’s beauty, power, and history.",
   },
   {
-    icon: HeartHandshake,
+    icon: LucideHeartHandshake,
     headline: "gather",
     blurb:
       "Galas, fundraisers, and community events, created with local arts partners, that bring Riverside together.",
@@ -55,10 +55,10 @@ export default function AboutRLO() {
             ABOUT RLO
           </p>
           <div className="max-w-[7.5rem] md:max-w-[9rem] border-b-7 xl:max-w-[11.5rem] xl:border-b-10 my-2 md:my-3 xl:mt-5 border-brand-orange" />
-          <h2 className="text-[22px] md:text-[2rem] xl:text-5xl max-w-xs md:max-w-sm  xl:max-w-2xl  xl:leading-16 font-bold uppercase headline-font">
+          <h2 className="text-[22px] md:text-[2rem] xl:text-5xl max-w-xs md:max-w-sm xl:max-w-2xl xl:leading-16 font-bold uppercase headline-font text-brand-black">
             Change hearts. <br /> Change the world.
           </h2>
-          <p className="mt-3  pb-5 md:pb-0 pl-5 md:pl-10 body-font max-w-md md:max-w-2xl text-base sm:text-xl leading-relaxed text-gray-700 font-semibold">
+          <p className="mt-3 pb-5 md:pb-0 pl-5 md:pl-10 body-font max-w-md md:max-w-2xl text-base sm:text-xl leading-relaxed text-gray-700 font-semibold">
             Riverside Lyric Opera is a nonprofit organization in Riverside,
             California, dedicated to celebrating and sharing classical and opera
             music. We aim to preserve these rich traditions and make

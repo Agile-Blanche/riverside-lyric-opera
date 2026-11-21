@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { LucideMenu, LucideX } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -100,7 +100,7 @@ export default function Navbar() {
             aria-controls="dropdown-menu"
             type="button"
           >
-            {open ? <X size={32} /> : <Menu size={32} />}
+            {open ? <LucideX size={32} /> : <LucideMenu size={32} />}
           </button>
         </div>
         {open && (
