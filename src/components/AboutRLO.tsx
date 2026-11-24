@@ -58,14 +58,14 @@ export default function AboutRLO() {
           <h2 className="text-[22px] md:text-[2rem] xl:text-5xl max-w-xs md:max-w-sm xl:max-w-2xl xl:leading-16 font-bold uppercase headline-font text-brand-black">
             Change hearts. <br /> Change the world.
           </h2>
-          <p className="mt-3 pb-5 md:pb-0 pl-5 md:pl-10 body-font max-w-md md:max-w-2xl text-base sm:text-xl leading-relaxed text-gray-700 font-semibold">
+          <p className="mt-3 pb-5 md:pb-0 pl-5 md:pl-10 body-font max-w-lg md:max-w-2xl text-base sm:text-xl leading-relaxed text-gray-700 font-semibold">
             Riverside Lyric Opera is a nonprofit organization in Riverside,
             California, dedicated to celebrating and sharing classical and opera
             music. We aim to preserve these rich traditions and make
             them accessible to everyone.
           </p>
 
-          <ul className="pl-5 md:pl-10 pt-4 md:pt-6 pb-12 grid grid-cols-1 lg:grid-cols-3 max-w-7xl gap-10 lg:gap-17">
+          <ul className="pl-5 md:pl-10 pt-4 md:pt-6 lg:pt-10 pb-12 grid grid-cols-1 lg:grid-cols-3 max-w-7xl gap-10 lg:gap-17">
             {PILLARS.map(({ icon: Icon, headline, blurb, href }) => {
               return (
                 <li key={headline}>
@@ -82,7 +82,7 @@ export default function AboutRLO() {
                   {href && (
                     <Link
                       href={href}
-                      className="pt-3 text-sm md:text-base text-brand-amber group ml-0.5 font-semibold lg:whitespace-nowrap inline-block"
+                      className="pt-3 text-sm md:text-base text-brand-amber group ml-0.5 font-semibold inline-block"
                     >
                       See upcoming{" "}
                       <span className="whitespace-nowrap">
@@ -103,8 +103,8 @@ export default function AboutRLO() {
 
       {/* Orange band with teams */}
       <div className="bg-brand-orange px-6 sm:px-15 pb-10 sm:pb-14">
-        <div className="p-4 sm:p-8 border-b-10 border-l-10 border-r-10 border-brand-white">
-          <div className="max-w-screen-2xl lg:px-13 xl:pr-0 xl:pl-13 py-10">
+        <div className="pl-4 pr-4 sm:pr-8 md:pl-12 lg:pl-24 py-4 sm:py-8 border-b-10 border-l-10 border-r-10 border-brand-white">
+          <div className="max-w-screen-2xl lg:pr-13 xl:pr-0 py-10 ">
             <SectionBlock title="TEAM">
               <TeamGrid people={team} type="team" />
             </SectionBlock>
