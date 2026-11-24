@@ -9,6 +9,8 @@
     --color-brand-lavender: #ded6eb;
     --color-brand-amber: #a9451f;
 
+    --breakpoint-xs: 28rem; /* 448px */
+
 }
 
 @layer utilities {

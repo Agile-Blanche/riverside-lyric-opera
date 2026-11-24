@@ -12,22 +12,18 @@ const GIFT_IMPACTS = [
 
 const DonateBanner = () => {
   return (
-    <section className="relative w-full scroll-mt-20 overflow-clip" id="donate">
-      {/* Background */}
-      <svg
-        className="absolute inset-0 w-full h-full"
-        preserveAspectRatio="none"
-        viewBox="0 0 100 100"
-      >
-        <polygon points="0,0 100,0 100,100 45,100" fill="#ded6eb" />
-
-        <polygon points="0,0 55,0 45,100 0,100" fill="#FFFFFF" />
-      </svg>
+    <section
+      className="relative w-full scroll-mt-20 overflow-clip bg-brand-lavender"
+      id="donate"
+    >
+      <div className="absolute inset-0 z-20 xs:drop-shadow-[8px_0_16px_rgb(0_0_0/0.25)]">
+        <div className="[clip-path:polygon(0_0,55%_0,45%_100%,0_100%)] bg-brand-white h-[calc(100%+1px)]" />
+      </div>
 
       {/* Text Content */}
-      <div className="grid grid-cols-1 sm:grid-cols-2">
+      <div className="grid grid-cols-1 xs:grid-cols-2">
         <div>
-          <div className="min-h-150 md:min-h-190 relative z-10 flex flex-col py-10 md:py-18 md:w-5xl px-7 mx-auto max-w-dvw">
+          <div className="min-h-150 xs:min-h-170 sm:min-h-150 md:min-h-190 relative z-30 flex flex-col pt-10 pb-5 md:py-18 md:w-5xl px-7 xs:px-5 sm:px-7 mx-auto max-w-dvw">
             <p className="headline-font font-bold uppercase text-brand-amber text-xl xl:text-3xl">
               Donate to RLO
             </p>
@@ -37,7 +33,7 @@ const DonateBanner = () => {
                 Carry opera into the future.
               </h2>
             </div>
-            <p className="mt-3 pl-5 md:pl-10 body-font max-w-sm sm:max-w-[18.5rem] text-base sm:text-xl leading-relaxed text-gray-700 font-semibold">
+            <p className="mt-5 sm:mt-3 pl-3.5 sm:pl-5 md:pl-10 body-font max-w-md sm:max-w-[18.5rem] text-base sm:text-xl leading-relaxed text-gray-700 font-semibold">
               A monthly gift brings world-class opera to everyone in our
               community, season after season.
             </p>
@@ -49,7 +45,7 @@ const DonateBanner = () => {
               className="
                         inline-flex items-center justify-center 
                         rounded-4xl bg-gray-100 w-40 
-                        mt-5 ml-5
+                        mt-8 sm:mt-5 ml-3.5 sm:ml-5
                         py-3
                         shadow-md hover:shadow-xl
                         transition-all
@@ -67,7 +63,7 @@ const DonateBanner = () => {
             </Link>
             <p
               id="donate-hint"
-              className="pt-3 ml-5 max-w-sm text-balance leading-4.5"
+              className="pt-5 sm:pt-3 ml-3.5 sm:ml-5 max-w-[26rem] sm:max-w-sm text-balance leading-4.5"
             >
               <small className="text-gray-600 xl:text-base body-font">
                 Select “Monthly” on the PayPal page. One-time gifts are welcome
@@ -75,7 +71,7 @@ const DonateBanner = () => {
               </small>
             </p>
 
-            <p className="mt-auto text-xs body-font leading-snug text-gray-600 max-w-md sm:max-w-[17rem]">
+            <p className="mt-auto text-xs body-font leading-snug text-gray-600 max-w-[15rem] sm:max-w-[17rem] ml-0">
               Riverside Lyric Opera is a{" "}
               <span className="whitespace-nowrap">501(c)(3)</span> tax-exempt
               nonprofit organization. Donations are tax-deductible to the extent
@@ -83,14 +79,14 @@ const DonateBanner = () => {
             </p>
           </div>
         </div>
-        <div className="hidden sm:block">
-          <div className="relative z-10 flex flex-col ml-3">
-            <div className="flex ml-15 mt-28 items-center">
+        <div className="hidden xs:block">
+          <div className="relative z-30 flex flex-col ml-2">
+            <div className="flex flex-row ml-10 sm:ml-15 mt-30 sm:mt-28 items-start sm:items-center">
               <h3 className="headline-font uppercase font-bold text-xl max-w-[10rem]">
                 Where your gift goes.
               </h3>
               <LucideHandHeart
-                className="text-brand-amber size-13 md:size-25"
+                className="text-brand-amber -translate-x-2 sm:-translate-x-0 size-13 md:size-25 hidden min-[500px]:block"
                 aria-hidden="true"
               />
             </div>
@@ -99,10 +95,10 @@ const DonateBanner = () => {
               {GIFT_IMPACTS.map((impact) => (
                 <li
                   key={impact}
-                  className="flex flex-row items-center gap-1.5 ml-10 mr-2 font-semibold text-gray-700 text-base leading-relaxed"
+                  className="flex flex-row items-start gap-1.5 ml-6 sm:ml-10 mr-2 font-semibold text-gray-700 text-[15px] sm:text-base leading-relaxed text-balance"
                 >
                   <span
-                    className="h-[4px] w-[14px] bg-brand-orange shrink-0"
+                    className="h-[4px] w-[14px] bg-brand-orange shrink-0 mt-[calc(0.5lh-2px)]"
                     aria-hidden="true"
                   ></span>
                   {impact}
@@ -110,13 +106,13 @@ const DonateBanner = () => {
               ))}
             </ul>
           </div>
-          <div className="absolute left-[45%] right-0 top-[60%] bottom-0 z-10 [clip-path:polygon(7.27%_0,100%_0,100%_100%,0_100%)]">
+          <div className="absolute left-[45%] right-0 top-[60%] -bottom-px z-10 [clip-path:polygon(7.27%_0,100%_0,100%_100%,0_100%)]">
             <Image
               sizes="55vw"
               src="/images/rlo-calendar-img.jpeg"
-              alt="A RLO performer."
+              alt="An RLO performer."
               fill
-              className="object-cover"
+              className="object-cover brightness-90"
             />
           </div>
         </div>
