@@ -16,7 +16,7 @@ const DonateBanner = () => {
       className="relative w-full scroll-mt-20 overflow-clip bg-brand-lavender"
       id="donate"
     >
-      <div className="absolute inset-0 z-20 xs:drop-shadow-[8px_0_16px_rgb(0_0_0/0.25)]">
+      <div className="absolute inset-0 z-20 drop-shadow-[8px_0_16px_rgb(0_0_0/0.15)] xs:drop-shadow-[8px_0_16px_rgb(0_0_0/0.25)]">
         <div className="[clip-path:polygon(0_0,55%_0,45%_100%,0_100%)] bg-brand-white h-[calc(100%+1px)]" />
       </div>
 
@@ -71,7 +71,7 @@ const DonateBanner = () => {
               </small>
             </p>
 
-            <p className="mt-auto text-xs body-font leading-snug text-gray-600 max-w-[15rem] sm:max-w-[17rem] ml-0">
+            <p className="mt-auto text-xs body-font leading-snug text-gray-600 xs:max-w-[14rem] sm:max-w-[17rem] ml-0">
               Riverside Lyric Opera is a{" "}
               <span className="whitespace-nowrap">501(c)(3)</span> tax-exempt
               nonprofit organization. Donations are tax-deductible to the extent
