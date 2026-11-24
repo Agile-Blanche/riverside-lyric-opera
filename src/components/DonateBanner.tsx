@@ -16,7 +16,7 @@ const DonateBanner = () => {
       className="relative w-full scroll-mt-20 overflow-clip bg-brand-lavender"
       id="donate"
     >
-      <div className="absolute inset-0 z-20 drop-shadow-[8px_0_16px_rgb(0_0_0/0.15)] xs:drop-shadow-[8px_0_16px_rgb(0_0_0/0.25)]">
+      <div className="absolute inset-0 z-20 drop-shadow-[8px_0_16px_rgb(0_0_0/0.25)]">
         <div className="[clip-path:polygon(0_0,55%_0,45%_100%,0_100%)] bg-brand-white h-[calc(100%+1px)]" />
       </div>
 
@@ -37,40 +37,40 @@ const DonateBanner = () => {
               A monthly gift brings world-class opera to everyone in our
               community, season after season.
             </p>
-
-            <Link
-              href={PAYPAL_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
+            <div className="flex flex-col items-center xs:items-start">
+              <Link
+                href={PAYPAL_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
                         inline-flex items-center justify-center 
                         rounded-4xl bg-gray-100 w-40 
-                        mt-8 sm:mt-5 ml-3.5 sm:ml-5
+                        xs:ml-3.5 mt-10 xs:mt-8 sm:mt-5 sm:ml-5
                         py-3
                         shadow-md hover:shadow-xl
                         transition-all
                         duration-500 ease-out hover:scale-110
                     "
-              aria-describedby="donate-hint"
-            >
-              <Image
-                src="/images/paypal-logo.svg"
-                alt="Donate with PayPal"
-                width={130}
-                height={30}
-                priority
-              />
-            </Link>
-            <p
-              id="donate-hint"
-              className="pt-5 sm:pt-3 ml-3.5 sm:ml-5 max-w-[26rem] sm:max-w-sm text-balance leading-4.5"
-            >
-              <small className="text-gray-600 xl:text-base body-font">
-                Select “Monthly” on the PayPal page. One-time gifts are welcome
-                too.
-              </small>
-            </p>
-
+                aria-describedby="donate-hint"
+              >
+                <Image
+                  src="/images/paypal-logo.svg"
+                  alt="Donate with PayPal"
+                  width={130}
+                  height={30}
+                  priority
+                />
+              </Link>
+              <p
+                id="donate-hint"
+                className="pt-5 sm:pt-3 xs:ml-3.5 sm:ml-5 max-w-[26rem] sm:max-w-sm text-balance leading-4.5 text-center xs:text-start"
+              >
+                <small className="text-gray-600 xl:text-base body-font">
+                  Select “Monthly” on the PayPal page. One-time gifts are
+                  welcome too.
+                </small>
+              </p>
+            </div>
             <p className="mt-auto text-xs body-font leading-snug text-gray-600 xs:max-w-[14rem] sm:max-w-[17rem] ml-0">
               Riverside Lyric Opera is a{" "}
               <span className="whitespace-nowrap">501(c)(3)</span> tax-exempt
