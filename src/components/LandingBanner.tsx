@@ -35,7 +35,7 @@ export default function LandingBanner() {
                 rel="noopener noreferrer"
                 className="group gap-x-2 inline-flex py-2.5 px-4 rounded-4xl bg-brand-lavender xl:text-2xl font-bold uppercase headline-font transition-all
                         duration-500 ease-out hover:scale-110 hover:bg-brand-orange text-brand-black"
-                aria-describedby="donate-hint"
+                aria-describedby="hero-donate-hint"
               >
                 Give Monthly
                 <LucideHeart
@@ -44,7 +44,7 @@ export default function LandingBanner() {
                 />
               </Link>
               <p
-                id="donate-hint"
+                id="hero-donate-hint"
                 className="pt-3 ml-2 max-w-sm text-balance leading-4.5"
               >
                 <small className="text-brand-lavender/70 xl:text-base body-font">
