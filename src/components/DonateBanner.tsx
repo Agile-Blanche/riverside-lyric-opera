@@ -21,9 +21,9 @@ const DonateBanner = () => {
       </div>
 
       {/* Text Content */}
-      <div className="grid grid-cols-1 xs:grid-cols-2 max-w-[90rem] min-[120rem]:max-w-[120rem] mx-auto">
+      <div className="grid grid-cols-1 xs:grid-cols-2 max-[120rem]:max-w-[90rem] container-wide">
         <div>
-          <div className="min-h-150 xs:min-h-170 sm:min-h-150 md:min-h-190 relative z-30 flex flex-col pt-10 pb-5 md:pt-18 md:pb-8 px-7 xs:px-5 sm:px-7 md:px-15 mx-auto max-w-dvw">
+          <div className="min-h-150 xs:min-h-170 sm:min-h-150 md:min-h-190 xl:min-h-210 relative z-30 flex flex-col pt-10 pb-5 md:pt-18 md:pb-8 px-7 xs:px-5 sm:px-7 md:px-15 mx-auto max-w-dvw">
             <p className="headline-font font-bold uppercase text-brand-amber text-xl xl:text-3xl">
               Donate to RLO
             </p>
