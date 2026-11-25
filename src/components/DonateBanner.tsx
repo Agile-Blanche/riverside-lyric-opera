@@ -21,7 +21,7 @@ const DonateBanner = () => {
       </div>
 
       {/* Text Content */}
-      <div className="grid grid-cols-1 xs:grid-cols-2 max-w-[90rem] mx-auto">
+      <div className="grid grid-cols-1 xs:grid-cols-2 max-w-[90rem] min-[120rem]:max-w-[120rem] mx-auto">
         <div>
           <div className="min-h-150 xs:min-h-170 sm:min-h-150 md:min-h-190 relative z-30 flex flex-col pt-10 pb-5 md:pt-18 md:pb-8 px-7 xs:px-5 sm:px-7 md:px-15 mx-auto max-w-dvw">
             <p className="headline-font font-bold uppercase text-brand-amber text-xl xl:text-3xl">
@@ -80,13 +80,13 @@ const DonateBanner = () => {
           </div>
         </div>
         <div className="hidden xs:block">
-          <div className="relative z-30 flex flex-col ml-2 md:ml-10 lg:ml-35 xl:ml-45">
+          <div className="relative z-30 flex flex-col ml-2 md:ml-10 lg:ml-35 xl:ml-45 2xl:ml-70">
             <div className="flex flex-row ml-10 sm:ml-15 mt-30 sm:mt-28 md:mt-45 xl:mt-43 items-start sm:items-center">
               <h3 className="headline-font uppercase font-bold text-xl md:text-2xl xl:text-[2.125rem] max-w-[10rem] md:max-w-[15rem] xl:max-w-xs xl:leading-12 md:text-balance">
                 Where your gift goes.
               </h3>
               <LucideHandHeart
-                className="text-brand-amber -translate-x-2 sm:-translate-x-0 md:-translate-x-14 xl:-translate-x-16 size-13 md:size-16 xl:size-20 hidden min-[500px]:block"
+                className="text-brand-amber -translate-x-2 sm:-translate-x-0 md:-translate-x-14 xl:-translate-x-16 size-13 md:size-16 xl:size-20 hidden min-[500px]:block shrink-0"
                 aria-hidden="true"
               />
             </div>
