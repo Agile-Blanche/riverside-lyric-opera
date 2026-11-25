@@ -20,7 +20,7 @@ export const placeholderBio = [
 export const PEOPLE: Person[] = [
   {
     name: "Anthony León",
-    teamRole: "President & Artistic Director",
+    teamRole: "President & Artistic\u00A0Director",
     boardRole: "President & Chairman", // 👈 in both
     src: "/images/team/anthony.jpg",
     slug: "anthony-leon",
