@@ -30,23 +30,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 0);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 {
   return (
     <html lang="en" className={`${sora.variable} ${inter.variable}`}>
       <body>
-       <Navbar isScrolled={isScrolled} />
+       <Navbar 
+       />
 
       {/* spacer */}
       <div
-        className={`transition-[height] duration-300 ease-out
-          ${isScrolled ? "h-[6rem]" : "h-[10rem]"}`}
+        className={`transition-[height] duration-300 ease-out h-[7rem]`}
       />
 
         {children}
