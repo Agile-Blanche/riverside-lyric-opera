@@ -1,62 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-    /* Colors */
+  /* Colors */
 
-    --color-brand-orange: #ff6d2c;
-    --color-brand-white: #FFFFFF;
-    --color-brand-black: #000000;
-    --color-brand-lavender: #ded6eb;
-    --color-brand-amber: #a9451f;
+  --color-brand-orange: #ff6d2c;
+  --color-brand-white: #ffffff;
+  --color-brand-black: #000000;
+  --color-brand-lavender: #ded6eb;
+  --color-brand-amber: #a9451f;
 
-    --breakpoint-xs: 28rem; /* 448px */
-
+  --breakpoint-xs: 28rem; /* 448px */
 }
+
+  @utility container-wide {
+    margin-inline: auto;
+    @media (width >= 120rem) {
+      max-width: 120rem;
+    }
+  } 
 
 @layer utilities {
-    .headline-font {
-        font-family: var(--font-sora), sans-serif;
+  .headline-font {
+    font-family: var(--font-sora), sans-serif;
+  }
+
+  .body-font {
+    font-family: var(--font-inter), serif;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(1rem);
     }
 
-    .body-font {
-        font-family: var(--font-inter), serif;
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    @keyframes fadeInUp {
-        0% {
-            opacity: 0;
-            transform: translateY(1rem);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+  }
 }
 
 @font-face {
-    font-family: 'Open Sans Condensed';
-    src: url('/fonts/open-sans-condensed/OpenSansCondensed-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Open Sans Condensed";
+  src: url("/fonts/open-sans-condensed/OpenSansCondensed-Light.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Open Sans Condensed';
-    src: url('/fonts/open-sans-condensed/OpenSansCondensed-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Open Sans Condensed";
+  src: url("/fonts/open-sans-condensed/OpenSansCondensed-LightItalic.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Open Sans Condensed';
-    src: url('/fonts/open-sans-condensed/OpenSansCondensed-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Open Sans Condensed";
+  src: url("/fonts/open-sans-condensed/OpenSansCondensed-Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* @media (min-width: 1236px) {

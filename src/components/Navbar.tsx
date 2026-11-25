@@ -49,7 +49,7 @@ export default function Navbar() {
       <nav
         className={`
     flex relative w-full items-center
-    h-[7rem]
+    h-[7rem] container-wide
   
   `}
       >

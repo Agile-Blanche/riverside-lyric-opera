@@ -16,7 +16,7 @@ export default function LandingBanner() {
             className="object-cover 2xl:object-[center_30%] brightness-90"
           />
           <div className="absolute inset-0 bg-linear-to-tr from-black/90 via-black/35 to-transparent"></div>
-          <div className="relative pt-10 px-7 md:px-15 pb-15 md:pb-30 xl:pb-20 headline-font tracking-tight">
+          <div className="relative pt-10 px-7 md:px-15 pb-15 md:pb-30 xl:pb-20 headline-font tracking-tight container-wide w-full">
             <p className="font-bold uppercase text-brand-orange text-xl xl:text-3xl">
               support rlo
             </p>
