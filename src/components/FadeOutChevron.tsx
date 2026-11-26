@@ -20,9 +20,9 @@ export default function FadeOutChevron({ targetId }: { targetId: string }) {
     <a
       aria-label="Back to top"
       href="#top"
-      className={`motion-safe:transition-[opacity,visibility] pointer-events-auto ${visible ? "opacity-100 visible" : "opacity-0 invisible"}`}
+      className={`motion-safe:transition-[opacity,visibility] motion-safe:duration-300 pointer-events-auto ${visible ? "opacity-100 visible" : "opacity-0 invisible"}`}
     >
-      <LucideSquareChevronUp className="fill-brand-white" size={45} />
+      <LucideSquareChevronUp className="fill-brand-white" size={45} strokeWidth={1.5} />
     </a>
   );
 }
