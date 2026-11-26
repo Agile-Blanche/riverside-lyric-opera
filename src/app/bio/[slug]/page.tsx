@@ -43,15 +43,15 @@ export default async function PersonPage({
         {/* Framed content block */}
         <section className="mx-auto max-w-[1300px] pt-8 sm:pt-10 pb-8">
           {/* Header: person name */}
-          <div className="text-start sm:px-10 pt-8 px-4 sm:pt-12">
-            <h1 className="headline-font font-bold text-[2.75rem] sm:text-9xl leading-[0.95] tracking-wide text-black">
+          <div className="text-start px-4 xs:px-8 pt-8 sm:pt-12">
+            <h1 className="headline-font font-bold text-[2.75rem] xs:text-6xl sm:text-8xl md:text-[7.5rem] lg:text-9xl leading-[0.95] tracking-wide text-black">
               {person.name}
             </h1>
           </div>
 
           {/* Body: image left / bio right */}
-          <div className="pb-10 px-4 xs:px-8 xl:px-4 border-brand-amber border-b-3">
-            <div className="mt-6 grid gap-6 grid-cols-1 sm:grid-cols-2 md:items-start">
+          <div className="pb-10 px-4 xs:px-8 border-brand-amber border-b-3">
+            <div className="mt-6 sm:mt-7 grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 sm:items-start">
               {/* Column 1 */}
               <div id="bio-portrait">
                 {/* Portrait */}
@@ -66,7 +66,7 @@ export default async function PersonPage({
                   />
                 </div>
                 {/* Artwork strip */}
-                <div className="relative mt-4 h-20 sm:h-35 w-full overflow-hidden bg-neutral-200">
+                <div className="relative mt-4 xs:mt-8 h-20 sm:h-35 w-full overflow-hidden bg-neutral-200">
                   <Image
                     src="/images/banner.png"
                     alt="Monet banner"
@@ -80,18 +80,18 @@ export default async function PersonPage({
               <div id="bio-content">
                 {/* Title */}
                 {person.teamRole && (
-                  <p className="body-font text-3xl tracking-wide text-brand-amber mb-8">
+                  <p className="body-font text-3xl xs:text-4xl lg:text-[2.7rem] tracking-wide xs:leading-12 sm:leading-13 lg:leading-14 text-brand-amber mb-8 sm:-mt-[10px]">
                     {person.teamRole}
                   </p>
                 )}
                 {!person.teamRole && person.boardRole && (
-                  <p className="body-font text-3xl tracking-wide text-brand-amber mb-8">
+                  <p className="body-font text-3xl xs:text-4xl lg:text-[2.7rem] tracking-wide xs:leading-12 sm:leading-13 lg:leading-14 text-brand-amber mb-8 sm:-mt-[10px]">
                     {person.boardRole}
                   </p>
                 )}
 
                 {/* Bio paragraphs */}
-                <article className="body-font prose prose-neutral max-w-none text-base leading-7 sm:leading-8">
+                <article className="body-font prose prose-neutral max-w-none text-base xs:text-lg sm:text-base leading-7 xs:leading-8">
                   {person.bio.map((para, i) => (
                     <p key={i} className="text-black/80 mb-4">
                       {para}
@@ -101,8 +101,8 @@ export default async function PersonPage({
               </div>
             </div>
           </div>
-          <div className="flex justify-end pt-8 px-4 text-brand-amber sticky bottom-8 pointer-events-none">
-            <FadeOutChevron targetId="bio-portrait"/>
+          <div className="flex justify-end pt-8 px-4 xs:px-8 text-brand-amber sticky bottom-8 pointer-events-none">
+            <FadeOutChevron targetId="bio-portrait" />
           </div>
         </section>
       </FadeInOnMount>
