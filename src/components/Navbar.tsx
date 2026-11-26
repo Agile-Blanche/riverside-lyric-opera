@@ -70,7 +70,7 @@ export default function Navbar() {
 
         {/* Right side: links + hamburger */}
         <div className="flex ml-auto mr-2 space-x-12 items-start">
-          <ul className="hidden md:flex space-x-12 items-center text-base -translate-y-[.5rem]">
+          <ul className="hidden md:flex space-x-12 md:space-x-10 items-center text-base -translate-y-[.5rem]">
             {NAV_LINKS.map(({ href, label }) => {
               const active = isActive(href);
               return (
@@ -92,7 +92,7 @@ export default function Navbar() {
           </ul>
           <button
             onClick={() => setOpen(!open)}
-            className={`text-black pr-9 hover:cursor-pointer hover:opacity-90 md:hidden -translate-y-[.5rem]
+            className={`text-black pr-4 sm:pr-9 hover:cursor-pointer hover:opacity-90 md:hidden -translate-y-[.5rem]
                       
               `}
             aria-label="Expand Menu"
