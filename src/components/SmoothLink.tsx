@@ -40,13 +40,13 @@ function customScrollTo(to: number, duration = SCROLL_MS) {
     const elapsed = now - startTime;
     const progress = Math.min(elapsed / duration, 1);
     const eased = easeInOutQuad(progress);
-    window.scrollTo(0, Math.round(start + change * eased));
+    window.scrollTo({ top: Math.round(start + change * eased), left: 0, behavior: "instant" });
 
     if (progress < 1) {
       requestAnimationFrame(animate);
     } else {
       // Pin exactly to avoid sub-pixel drift
-      window.scrollTo({ top: to, left: 0, behavior: "auto" });
+      window.scrollTo({ top: to, left: 0, behavior: "instant" });
     }
   }
 

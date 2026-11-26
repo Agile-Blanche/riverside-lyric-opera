@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
 {
   return (
-    <html lang="en" className={`${sora.variable} ${inter.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${sora.variable} ${inter.variable} motion-safe:scroll-smooth`}>
       <body>
        <Navbar 
        />
